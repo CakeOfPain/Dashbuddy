@@ -1,0 +1,4 @@
+{
+    "msg": "Bad Request incorrect field passed. Allowed request fields for earth/imagery method are 'lat', 'lon', 'address', 'dataset', 'date', 'cloud_score', 'dim'",
+    "service_version": "v5000"
+}

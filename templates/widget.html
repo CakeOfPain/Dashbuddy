@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='css/widget_medium.css') }}">
+
+<div class="widget-container">
+    <div class="widget-header">
+        <h3>{{ title }}</h3>
+        <h4>{{ desc }}</h4>
+    </div>
+    <div class="widget-body">
+        {{ view }}
+    </div>
+    <div class="widget-footer">
+        <h5>Last Update: {{ utc_dt }}</h5>
+    </div>
+</div>

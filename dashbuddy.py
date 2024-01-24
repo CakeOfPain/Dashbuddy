@@ -8,4 +8,4 @@ app = Flask(__name__)
 def index():
     Widget.load()
     widgetView = '<div><h1>widgetView</h1></div>'
-    return render_template('widget.html', title="Testwidget", desc="desc", view=widgetView, utc_dt=datetime.datetime.utcnow())
+    return render_template('widget.html', title="Kalender", desc="Vorlesungen", view=widgetView, utc_dt=datetime.datetime.utcnow())

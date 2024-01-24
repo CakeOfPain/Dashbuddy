@@ -12,9 +12,8 @@ app1=Flask(__name__)
 
 @app1.route('/api/empty',methods=['GET'])
 def leer_get():
-    with open('get.json','w') as f:
-        json.dump({},f)
-        return"Leerer File GET",200
+    with open('get.json','r') as f:
+        return json.load(f)
 
 # POST-Methode programmieren
 

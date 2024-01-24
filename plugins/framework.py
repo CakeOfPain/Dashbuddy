@@ -18,7 +18,15 @@ class Widget:
 def register(widget):
     print(f"Plugin Framework: Registered {widget}")
 
-# Methode, um Widgets zu laden
-def load():
+# Methode, um ein Widget zu entfernen
+def remove(uuid):
+    print(f"Plugin Framework: Removed {uuid}")
+
+# Methode, um die Position eines Widgets zu updaten
+def updatePosition(uuid, posX, posY):
+    print(f"Plugin Framework: Updated {uuid}'s position to X:{posX}, Y:{posY}")
+
+# Methode, um Widgets zu platzieren
+def place():
     amount = 2
     print(f"Plugin Framework: Loaded {amount} Widgets")

@@ -5,20 +5,20 @@
 		{"id":"4fc2359ad9bccf20","type":"text","text":"Dashbuddy","x":280,"y":-960,"width":250,"height":60},
 		{"id":"09781cc13e8c6fd3","type":"text","text":"API","x":1000,"y":-521,"width":250,"height":60},
 		{"id":"443a9d0fb1ccb599","type":"text","text":"Plugin-Manager","x":600,"y":-520,"width":250,"height":60},
-		{"id":"12d06f84cc48dd37","type":"text","text":"Widget-Speicher-Funktion","x":1220,"y":-340,"width":250,"height":60},
-		{"id":"799d70d35facd251","type":"text","text":"Personalisierung-Speicher-Funktion","x":780,"y":-340,"width":250,"height":60},
-		{"id":"4a0f17d52fe9e99b","type":"text","text":"Widget-Add-Feature","x":120,"y":-440,"width":250,"height":60},
+		{"id":"12d06f84cc48dd37","type":"text","text":"Widget-API","x":1220,"y":-340,"width":250,"height":60},
+		{"id":"799d70d35facd251","type":"text","text":"Customization-API","x":780,"y":-340,"width":250,"height":60},
 		{"id":"3fb905be2190dbe4","type":"text","text":"Einstellungen","x":-180,"y":-280,"width":250,"height":60},
 		{"id":"f5e5d73f5ed33304","type":"text","text":"Widget-Grid","x":-460,"y":-521,"width":250,"height":60},
 		{"id":"b3560496d280a519","type":"text","text":"Personalisation","x":-180,"y":-180,"width":250,"height":60},
 		{"id":"e34cd38ea2e51a9f","type":"text","text":"Unsplashed-Background-Images","x":-180,"y":-93,"width":250,"height":53},
 		{"id":"ab227bb572c2f2f7","type":"text","text":"Ollama-LLM-Widget","x":120,"y":100,"width":250,"height":60},
-		{"id":"2998528bdce46334","type":"text","text":"Weather-View","x":120,"y":20,"width":250,"height":60}
+		{"id":"2998528bdce46334","type":"text","text":"Weather-View","x":120,"y":20,"width":250,"height":60},
+		{"id":"4a0f17d52fe9e99b","type":"text","text":"Widget-Add-Feature","x":120,"y":-420,"width":250,"height":60},
+		{"id":"ff0d6c9b5146b734","x":120,"y":-550,"width":250,"height":60,"type":"text","text":"Widget-Prototyping"}
 	],
 	"edges":[
 		{"id":"00fb6455ed48bbf0","fromNode":"c8e1c4d772aaa1de","fromSide":"bottom","toNode":"f5e5d73f5ed33304","toSide":"top"},
 		{"id":"ff7fb96b8a2b4b4c","fromNode":"c8e1c4d772aaa1de","fromSide":"bottom","toNode":"3fb905be2190dbe4","toSide":"top"},
-		{"id":"fd1b7d4d04cc2519","fromNode":"c8e1c4d772aaa1de","fromSide":"bottom","toNode":"4a0f17d52fe9e99b","toSide":"top"},
 		{"id":"99164053de43df05","fromNode":"4fc2359ad9bccf20","fromSide":"bottom","toNode":"c8e1c4d772aaa1de","toSide":"top"},
 		{"id":"6418ea348f059a33","fromNode":"4fc2359ad9bccf20","fromSide":"bottom","toNode":"4072e7c4481b3e03","toSide":"top"},
 		{"id":"1e7a54ba8d43d8c0","fromNode":"4072e7c4481b3e03","fromSide":"bottom","toNode":"443a9d0fb1ccb599","toSide":"top"},
@@ -27,6 +27,9 @@
 		{"id":"ea53c78b59e5d10c","fromNode":"09781cc13e8c6fd3","fromSide":"bottom","toNode":"799d70d35facd251","toSide":"top"},
 		{"id":"62f58469b87d2028","fromNode":"3fb905be2190dbe4","fromSide":"bottom","toNode":"b3560496d280a519","toSide":"top"},
 		{"id":"486069f8e73d7963","fromNode":"b3560496d280a519","fromSide":"bottom","toNode":"e34cd38ea2e51a9f","toSide":"top"},
-		{"id":"6f66fbbc440771ea","fromNode":"4a0f17d52fe9e99b","fromSide":"bottom","toNode":"2998528bdce46334","toSide":"top"}
+		{"id":"6f66fbbc440771ea","fromNode":"4a0f17d52fe9e99b","fromSide":"bottom","toNode":"2998528bdce46334","toSide":"top"},
+		{"id":"49d8b2b1dbb4f545","fromNode":"c8e1c4d772aaa1de","fromSide":"bottom","toNode":"ff0d6c9b5146b734","toSide":"top"},
+		{"id":"677ea950b402192c","fromNode":"ff0d6c9b5146b734","fromSide":"bottom","toNode":"4a0f17d52fe9e99b","toSide":"top"},
+		{"id":"4b9dfd688a7cb7b6","fromNode":"2998528bdce46334","fromSide":"bottom","toNode":"ab227bb572c2f2f7","toSide":"top"}
 	]
 }

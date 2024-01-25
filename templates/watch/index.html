@@ -1,0 +1,29 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@500&display=swap');
+
+    .time-view-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .time-view-container div {
+        font-size: 2em;
+        font-family: 'Overpass Mono', monospace;
+    }
+</style>
+
+<div class="time-view-container">
+    <div id="time-view"></div>
+</div>
+
+<script>
+    const timeView = document.getElementById('time-view');
+
+    async function updateWatch() {
+        const response = await fetch("/api/plugin/watch/time")
+        const time = await response.text();
+        timeView.innerHTML = time;
+    }
+    updateWatch();
+    setInterval(updateWatch, 100);
+</script>

@@ -1,6 +1,10 @@
 from flask import Flask, render_template
+from pluginManager import PluginManager
 
 app = Flask(__name__)
+
+pluginManager = PluginManager(app)
+pluginManager.manage()
 
 @app.route("/")
 def index():

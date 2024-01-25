@@ -1,7 +1,11 @@
 from flask import Flask, render_template, request
+from pluginManager import PluginManager
 import json
 
 app = Flask(__name__)
+
+pluginManager = PluginManager(app)
+pluginManager.manage()
 
 @app.route("/")
 def index():
@@ -18,3 +22,7 @@ def postWidgets():
         widgets = json.loads(request.data)
         json.dump(widgets, f)
         return {"message": "Widgets were saved"}, 201
+
+@app.get("/api/plugins")
+def listPlugins():
+    return pluginManager.listPluginsJson(), 200

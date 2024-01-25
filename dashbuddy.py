@@ -1,4 +1,5 @@
-from flask import Flask, render_template
+from flask import Flask, render_template, request
+import json
 
 app = Flask(__name__)
 
@@ -8,8 +9,12 @@ def index():
 
 @app.route("/api/widgets", methods=["GET"])
 def getWidgets():
-    return {}, 200
+    with open("./data/widgets.json", "r") as f:
+        return json.load(f), 200
 
 @app.route("/api/widgets", methods=["POST"])
 def postWidgets():
-    return {}, 200
+    with open("./data/widgets.json", "w") as f:    
+        widgets = json.loads(request.data)
+        json.dump(widgets, f)
+        return {"message": "Widgets were saved"}, 201

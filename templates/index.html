@@ -8,10 +8,22 @@
     </head>
     <body>
         <p>Welcome to Dashbuddy!</p>
-        <div class="widget-container-column">
-            <div class="widget-container-row">
-                <iframe class="widget" src="/plugin/watch"></iframe>
-            </div>
+        <div id="widget-container" class="widget-container-column">
         </div>
+
+        <script>
+            const widgetContainer = document.getElementById('widget-container');
+            async function loadWidgets() {
+                const response = await fetch("/api/widgets");
+                const responseJson =  await response.json();
+
+                widgetContainer.innerHTML = responseJson.map(row => {
+                    return '<div class="widget-container-row">' + row.map(column => {
+                        return `<iframe class="widget" src="/plugin/${column.plugin}"></iframe>`
+                    }).join("") + "</div>";
+                }).join("");
+            }
+            loadWidgets();
+        </script>
     </body>
 </html>

@@ -5,9 +5,48 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
         <title>Dashbuddy</title>
+        <style>
+            body {
+                background-image: url('{{ imageUrl }}');
+            }
+        </style>
     </head>
     <body>
-        <p>Welcome to Dashbuddy!</p>
-        <iframe src="/plugin/watch"></iframe>
+        <div class="application">
+            <p>Welcome to Dashbuddy!</p>
+            <iframe src="/plugin/watch"></iframe>
+
+            <div class="settings-container">
+                <p>Settings</p>
+                <div class="blur-slider">
+                    <p id="blur"></p>
+                    <input type="range" min="0" max="15" value="3" class="slider" id="background-blur">
+                </div>
+                <div class="accent-color">
+                    <p id="accent">Accent Color:</p>
+                    <div class="selection-box">
+                        <input class="accent-red settings-button" type="button" onclick="setAccentColor(red)">
+                        <input class="accent-green settings-button" type="button" onclick="setAccentColor(green)">
+                        <input class="accent-blue settings-button" type="button" onclick="setAccentColor(blue)">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var slider = document.getElementById("background-blur");
+            var output = document.getElementById("blur");
+            output.innerHTML = "Background Blur: " + slider.value + "px"; // Display the default slider value
+
+            // Update the current slider value (each time you drag the slider handle)
+            slider.oninput = function() {
+                output.innerHTML = "Background Blur: " + this.value + "px";
+                document.documentElement.style.setProperty("--blur-strength", this.value + "px");
+            }
+
+            // Set Accent Color
+            function setAccentColor(color) {
+                document.documentElement.style.setProperty("--accent-color", color);
+            }
+        </script>
     </body>
 </html>

@@ -9,10 +9,8 @@
 
 .widget {
     border: none;
-    border-radius: 10px;
-    background: linear-gradient(225deg, #cacacaac, #f0f0f0ac);
-    box-shadow: -20px 20px 60px #bebebeac,
-        20px -20px 60px #ffffffac;
+    border-radius: 3px;
+    background: transparent;
 }
 
 .widget-container-row {

@@ -7,7 +7,6 @@
         <title>Dashbuddy</title>
     </head>
     <body>
-        <p>Welcome to Dashbuddy!</p>
         <div id="widget-container" class="widget-container-column">
         </div>
 
@@ -19,6 +18,9 @@
 
                 widgetContainer.innerHTML = responseJson.map(row => {
                     return '<div class="widget-container-row">' + row.map(column => {
+                        if(column.plugin === "blank") {
+                            return '<div class="widget"></div>';
+                        }
                         return `<iframe class="widget" src="/plugin/${column.plugin}"></iframe>`
                     }).join("") + "</div>";
                 }).join("");

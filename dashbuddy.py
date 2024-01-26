@@ -27,13 +27,13 @@ def postWidgets():
 def listPlugins():
     return pluginManager.listPluginsJson(), 200
 
-@app.get("/get/empty")
+@app.get("/api/customization")
 def get_methode():
     with open('./data/customization.json','r') as f:
         customization = json.load(f)
         return customization, 200
 
-@app.post("/post/empty")
+@app.post("/api/customization")
 def post_methode():
     with open('./data/customization.json','w') as f:
         customization = json.loads(request.data)

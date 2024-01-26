@@ -1,5 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
 * {
+    font-family: 'Nunito Sans', monospace;
     background-color: white;
     text-align: center;
     color: black;
+}
+
+.widget {
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(225deg, #cacacaac, #f0f0f0ac);
+    box-shadow: -20px 20px 60px #bebebeac,
+        20px -20px 60px #ffffffac;
+}
+
+.widget-container-row {
+    display: flex;
+    overflow: hidden;
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+}
+.widget-container-row  * {
+    width: 100%;
+}
+
+.widget-container-column {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }

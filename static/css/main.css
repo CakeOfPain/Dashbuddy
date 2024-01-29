@@ -164,10 +164,18 @@ body {
     background-color: blue;
 }
 
+.accent-green {
+    background-color: green;
+}
+
 .widget {
-    border: none;
-    border-radius: 3px;
-    background: transparent;
+    /* Widget Styling */
+    background-color: var(--widget-background);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(var(--widget-background-blur));
+    -webkit-backdrop-filter: blur(var(--widget-background-blur));
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .widget-container-row {
@@ -182,10 +190,8 @@ body {
 }
 
 .widget-container-column {
+    position: absolute;
     display: flex;
     flex-direction: column;
     width: 100%;
-}
-.accent-green {
-    background-color: green;
 }

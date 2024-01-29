@@ -3,11 +3,12 @@
 ## Widget-API
 
 The Widget-API is being used for saving and retrieving the layout of the dashboard.
-The returned List contain are the Rows. Each Row has a List of widgets (columns) that are evenly spaced.
-Each Widget got the fields:
+The returned List contain the Rows. Each Row is a List of widgets objects (columns).
+Each Widget object got the fields:
 - `plugin` The plugin that is going to be showed
 - `params` The parameters for the plugin (query params)
 
+Example:
 ```json
 [
     [
@@ -35,7 +36,9 @@ Methods:
 ## Customization-API
 
 Returns the Settings as object (dictionary), containing the settings as keys.
+Can also be used for changing the Settings.
 
+Example:
 ```json
 {
     "Some Setting": 1.0,

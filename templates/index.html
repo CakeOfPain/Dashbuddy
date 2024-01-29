@@ -4,6 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <title>Dashbuddy</title>
         <style>
             body {
@@ -13,13 +14,22 @@
     </head>
     <body>
         <div class="application">
+            <div class="menu-bar">
+                <button class="menu-button menu-icon" onclick="toggleWidgetMenu()">
+                    <i class='bx bxs-message-square-add'></i>
+                </button>
+                <button class="menu-button menu-icon" onclick="toggleSettingsMenu()">
+                    <i class='bx bxs-cog'></i>
+                </button>
+            </div>
+            
             <iframe class="widget-style watch-container" src="/plugin/watch"></iframe>
 
-            <div class="widget-style settings-container">
+            <div class="widget-style settings-container" id="settingsMenu">
                 <p>Settings</p>
                 <div class="blur-slider">
                     <p id="blur"></p>
-                    <input type="range" min="0" max="15" value="3" class="slider" id="background-blur">
+                    <input type="range" min="0" max="15" value="0" class="slider" id="background-blur">
                 </div>
                 <div class="accent-color">
                     <p id="accent">Accent Color:</p>
@@ -30,22 +40,11 @@
                     </div>
                 </div>
             </div>
+
+            <div class="widget-style widget-library" id="widgetLibrary">
+                <p>Library</p>
+            </div>
         </div>
-        <script>
-            var slider = document.getElementById("background-blur");
-            var output = document.getElementById("blur");
-            output.innerHTML = "Background Blur: " + slider.value + "px"; // Display the default slider value
-
-            // Update the current slider value (each time you drag the slider handle)
-            slider.oninput = function() {
-                output.innerHTML = "Background Blur: " + this.value + "px";
-                document.documentElement.style.setProperty("--blur-strength", this.value + "px");
-            }
-
-            // Set Accent Color
-            function setAccentColor(color) {
-                document.documentElement.style.setProperty("--accent-color", color);
-            }
-        </script>
+        <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
     </body>
 </html>

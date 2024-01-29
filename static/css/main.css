@@ -4,7 +4,7 @@ html {
     --widget-background-blur: 20px;
     --accent-color: rgb(0,0,255);
     --border-radius: 15px;
-    --blur-strength: 5px;
+    --blur-strength: 0px;
 }
 
 * {
@@ -30,6 +30,32 @@ body {
     z-index: -100;
 }
 
+.menu-bar {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    width: 128px;
+    display: flex;
+    align-content: space-evenly;
+}
+
+.menu-icon {
+    margin: 8px;
+    width: 48px;
+    height: 48px;
+    font-size: 1.5rem;
+    text-align: center;
+
+    background: transparent;
+    background-color: var(--widget-background);
+    border-radius: var(--border-radius);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(var(--widget-background-blur));
+    -webkit-backdrop-filter: blur(var(--widget-background-blur));
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    outline: none; 
+}
+
 .watch-container {
     position: absolute;
     right: 600px;
@@ -43,10 +69,26 @@ body {
     /* Widget Position */
     z-index: 100;
     position: absolute;
-    bottom: 100px;
-    right: 15px;
+    margin: 0;
+    padding: 0;
+    bottom: 88px;
+    right: 21px;
     height: 400px;
     width: 300px;
+    display: none;
+}
+
+.widget-library {
+    /* Widget Position */
+    z-index: 100;
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    bottom: 88px;
+    right: 21px;
+    height: 400px;
+    width: 300px;
+    display: none;
 }
 
 .widget-style {

@@ -1,1 +1,1 @@
-[[{"plugin": "watch"}], [{"plugin": "blank"}, {"plugin": "watch"}]]
+[[{"plugin": "watch", "params": {}}, {"plugin": "note", "params": {"text": "Hi How are you?"}}]]

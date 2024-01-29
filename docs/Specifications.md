@@ -4,7 +4,7 @@
 
 The Widget-API is being used for saving and retrieving the layout of the dashboard.
 The returned List contain the Rows. Each Row is a List of widgets objects (columns).
-Each Widget object got the fields:
+Each Widget object has the following fields:
 - `plugin` The plugin that is going to be showed
 - `params` The parameters for the plugin (query params)
 

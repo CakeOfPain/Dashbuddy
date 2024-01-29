@@ -1,0 +1,36 @@
+# Widget-Ideas
+    - Wetter
+            + import von Google möglich
+            + unglücklicherweise mit Missbrauchsschutz, deshalb API-Key muss angelegt werden
+                - Der API-Key muss am Ende der URL mit angegeben werden
+                - Der Key sollte aber nicht in der Code-Datei gespeicher sein, da dieser sonst von Dritten auch eingesehen werden kann
+            + man kann auch https://api.openweathermap.org/data/2.5/weather
+                - es wird auch ein API-Key benötigt
+                - die Location muss angegeben werden
+                - Vorteile:
+                                # Unterteilung in Temperatur, Luftfeuchtigkeit und Wetter!!
+                - Nachteil:
+                                # Man muss ich auf Wetterseite registrieren
+                                # Pro Tag können nur eine begrenzte Anzahl an Abrufen erfolgen
+                                # Die Nutzungsbedigungen müssen kontrolliert werden
+        BIG Problem: Die meisten Websiten sind eigentlich gegen das Scrapen ihre Daten?!
+    - Google Maps Integration:
+            + Krass viele Möglichkeiten
+            + Anmeldung teilweise oder ganz nötig
+            + APIs auf der Site sehr versteckt
+            + Google will das man ihre Clouddienste kauft
+            + Kostet Geld
+    - Andere Karten
+                        + PositionStack
+                                - 10000 Anfrage pro Tag
+                                - kann aber irgendwie nur Adresse in Koordinaten übertragen
+                        + Here
+                                - Daten aus über 200 Ländern (Warum ist das angegeben? Hat wohl nicht jedes Land!?)
+                                - Karten und Standortdienstleistungen
+                        Benötigen natürlich auch API-Keys
+    - Unscharfstellung des Hintergrunds
+            + Hintergrundbild mit CSS einfügen
+            + filter: blur(xpx) funktion zum Unscharf stellen!
+            + Keine Ahung wie das mit der Veränderung dann ist
+                    !! Attention: kann Probleme mit der Darstellung in der HTML geben
+    - 

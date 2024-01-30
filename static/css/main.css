@@ -184,6 +184,7 @@ body {
     flex-direction: row;
     width: 100%;
     justify-content: center;
+    height: 10em;
 }
 .widget-container-row  * {
     width: 100%;

@@ -36,7 +36,11 @@ def index():
     #unsplashDownload = unsplash.photo.download(imageId)
     #unsplashDownload = "https://images.unsplash.com/photo-1650502446384-a07e09609ed7?ixid=M3w4ODczOHwwfDF8cmFuZG9tfHx8fHx8fHx8MTcwNjE4MDYwMnw&ixlib=rb-4.0.3&w=1512&h=982&dpr=2&auto=format&q=60&fit=crop"
 
-    return render_template('index.html', imageUrl=welcomeToHellBackground)
+    return render_template('index.html', imageUrl=lofotenBackground)
+
+@app.route("/edit")
+def editMode():
+    return render_template('edit.html', imageUrl=lofotenBackground), 200
 
 @app.get("/api/widgets")
 def getWidgets():

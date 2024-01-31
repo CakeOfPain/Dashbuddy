@@ -1,0 +1,33 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+    .weatherReal-view-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;}
+
+    .weatherReal-view-container div {
+        font-size: 2em;
+        font-family: 'Nunito Sans', monospace;
+        color: white;
+        text-shadow: 0 0 3px #000, 0 0 5px #000;}
+    
+</style>
+
+<div class="weatherReal-view-container">
+    <div id="weatherReal-view"></div>
+</div>
+
+<script>
+    const timeView = document.getElementById('weatherReal-view');
+
+    async function updateWeatherReal() {
+        const response = await fetch("/api/plugin/weather(real)/view")
+        const weatherReal = await response.text();
+        weatherRealView.innerHTML = weatherReal;
+    }
+    updateWeatherReal();
+    setInterval(updateWeatherReal, 100000);
+</script>

@@ -1,0 +1,33 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+    .weather-view-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;}
+
+    .weather-view-container div {
+        font-size: 2em;
+        font-family: 'Nunito Sans', monospace;
+        color: white;
+        text-shadow: 0 0 3px #000, 0 0 5px #000;}
+    
+</style>
+
+<div class="weather-view-container">
+    <div id="weather-view"></div>
+</div>
+
+<script>
+    const timeView = document.getElementById('weather-view');
+
+    async function updateWeather() {
+        const response = await fetch("/api/plugin/weather/view")
+        const weather = await response.text();
+        timeView.innerHTML = weather;
+    }
+    updateWeather();
+    setInterval(updateWeather, 100000);
+</script>

@@ -30,20 +30,20 @@ function setAccentColor(color) {
     document.documentElement.style.setProperty("--accent-color", '#' + color);
 }
 
+var settingsMenu = document.getElementById("settingsMenu");
 function toggleSettingsMenu() {
-    var menu = document.getElementById("settingsMenu");
-    if (menu.style.display === "none") {
-        menu.style.display = "block";
+    if (settingsMenu.style.display === "none") {
+        settingsMenu.style.display = "block";
     } else {
-        menu.style.display = "none";
+        settingsMenu.style.display = "none";
     }
 }
 
+var widgetLibrary = document.getElementById("widgetLibrary");
 function toggleWidgetMenu() {
-    var x = document.getElementById("widgetLibrary");
-    if (x.style.display === "none") {
-        x.style.display = "block";
+    if (widgetLibrary.style.display === "none") {
+        widgetLibrary.style.display = "block";
     } else {
-        x.style.display = "none";
+        widgetLibrary.style.display = "none";
     }
 }

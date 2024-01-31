@@ -12,7 +12,9 @@
             }
         </style>
     </head>
-    <body>
+    <body>          
+        <div id="widget-container" class="widget-container-column">
+        </div>
         <div class="application">
             <div class="menu-bar">
                 <button class="menu-icon menu-button" onclick="toggleWidgetMenu()">
@@ -22,11 +24,8 @@
                     <i class='bx bxs-cog'></i>
                 </button>
             </div>
-          
-            <div id="widget-container" class="widget-container-column">
-            </div>
 
-            <div class="widget-style settings-container" id="settingsMenu">
+            <div class="settings-container widget-style" id="settingsMenu">
                 <p>Settings</p>
                 <div class="blur-slider">
                     <p id="blur"></p>

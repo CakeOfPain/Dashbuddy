@@ -10,7 +10,7 @@ async function loadWidgets() {
     widgetContainer.innerHTML = responseJson.map(row => {
         return '<div class="widget-container-row">' + row.map(column => {
             if (column.plugin === "blank") {
-                return '<div class="widget"></div>';
+                return '<div></div>';
             }
             const params = Object.keys(column.params).map(key => encodeURI(key) + "=" + encodeURI(column.params[key])).join("&")
             return `<iframe class="widget" src="/plugin/${column.plugin}?${params}"></iframe>`

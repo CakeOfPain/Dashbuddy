@@ -42,8 +42,10 @@ class PluginManager(object):
             try:
                 plugin = Plugin()
                 createPlugin(plugin)
+                plugin.contentRenderer.__name__ += pluginPath
                 self.plugins.append(plugin)
                 for name, callback in plugin.apis:
+                    callback.__name__ += pluginPath
                     self.flaskApp.get(f'/api/plugin/{plugin.pluginName}/{name}')(callback)
                 self.flaskApp.get(f'/plugin/{plugin.pluginName}')(plugin.contentRenderer)
             except Exception:

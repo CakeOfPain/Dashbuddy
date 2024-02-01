@@ -23,13 +23,15 @@
 </div>
 
 <script>
-    const timeView = document.getElementById('time-view');
+    let time = document.getElementById("time-view");
 
-    async function updateWatch() {
-        const response = await fetch("/api/plugin/watch/time")
-        const time = await response.text();
-        timeView.innerHTML = time;
+    setInterval(() => {
+        let datetime = new Date();
+        time.innerHTML = datetime.toLocaleTimeString();
+    }, 1000);
+
+    window.onload = function() {
+        let datetime = new Date();
+        time.innerHTML = datetime.toLocaleTimeString();
     }
-    updateWatch();
-    setInterval(updateWatch, 100);
 </script>

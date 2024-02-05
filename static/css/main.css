@@ -171,6 +171,7 @@ body {
 
 .widget {
     /* Widget Styling */
+    margin: 10px;
     background-color: var(--widget-background);
     border-radius: var(--border-radius);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);

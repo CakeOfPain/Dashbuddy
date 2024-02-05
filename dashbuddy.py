@@ -19,7 +19,7 @@ def index():
 
 @app.route("/edit")
 def editMode():
-    return render_template('edit.html', imageUrl=lofotenBackground), 200
+    return render_template('edit.html', imageUrl=backgroundUrl), 200
 
 @app.get("/api/widgets")
 def getWidgets():

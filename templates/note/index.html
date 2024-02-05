@@ -10,26 +10,18 @@
         background-color: transparent;
     }
 
-    .time-view-container div {
+    .time-view-container textarea {
+        background-color: transparent;
+        border: none;
         font-size: 2em;
         font-family: 'Nunito Sans', monospace;
-        color: white;
-        text-shadow: 0 0 3px #000, 0 0 5px #000;
+    }
+
+    .time-view-container textarea:focus {
+        outline: none;
     }
 </style>
 
 <div class="time-view-container">
-    <div id="time-view"></div>
+    <textarea id="time-view">{{noteText}}</textarea>
 </div>
-
-<script>
-    const timeView = document.getElementById('time-view');
-
-    async function updateWatch() {
-        const response = await fetch("/api/plugin/watch/time")
-        const time = await response.text();
-        timeView.innerHTML = time;
-    }
-    updateWatch();
-    setInterval(updateWatch, 100);
-</script>

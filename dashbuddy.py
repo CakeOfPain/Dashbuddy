@@ -1,15 +1,25 @@
+# Flask App for Dashbuddy
+
+import json
+
 from flask import Flask, render_template, request
 from pluginManager import PluginManager
-import json
 
 app = Flask(__name__)
 
+# Plugin Manager Config
 pluginManager = PluginManager(app)
 pluginManager.manage()
 
+backgroundUrl = "https://images.unsplash.com/photo-1593291805141-990f40ec982d?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+
 @app.route("/")
 def index():
-    return render_template('index.html')
+    return render_template('index.html', imageUrl=backgroundUrl)
+
+@app.route("/edit")
+def editMode():
+    return render_template('edit.html', imageUrl=lofotenBackground), 200
 
 @app.get("/api/widgets")
 def getWidgets():
@@ -27,13 +37,13 @@ def postWidgets():
 def listPlugins():
     return pluginManager.listPluginsJson(), 200
 
-@app.get("/get/empty")
+@app.get("/api/customization")
 def get_methode():
     with open('./data/customization.json','r') as f:
         customization = json.load(f)
         return customization, 200
 
-@app.post("/post/empty")
+@app.post("/api/customization")
 def post_methode():
     with open('./data/customization.json','w') as f:
         customization = json.loads(request.data)

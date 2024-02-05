@@ -4,11 +4,48 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
         <title>Dashbuddy</title>
+        <style>
+            body {
+                background-image: url('{{ imageUrl }}');
+            }
+        </style>
     </head>
-    <body>
-        <p>Welcome to Dashbuddy!</p>
-        <iframe src="/plugin/watch"></iframe>
-        <iframe src="/plugin/calendar"></iframe>
+    <body>          
+        <div id="widget-container" class="widget-container-column">
+        </div>
+        <!--
+        <div class="application">
+            <div class="menu-bar">
+                <button class="menu-icon menu-button" onclick="toggleWidgetMenu()">
+                    <i class='bx bxs-message-square-add'></i>
+                </button>
+                <button class="menu-icon menu-button" onclick="toggleSettingsMenu()">
+                    <i class='bx bxs-cog'></i>
+                </button>
+            </div>
+
+            <div class="settings-container widget-style" id="settingsMenu">
+                <p>Settings</p>
+                <div class="blur-slider">
+                    <p id="blur"></p>
+                    <input type="range" min="0" max="15" value="0" class="slider" id="background-blur">
+                </div>
+                <div class="accent-color">
+                    <p id="accent">Accent Color:</p>
+                    <div class="selection-box">
+                        <input class="accent-red settings-button" type="button" onclick="setAccentColor('FF0000')">
+                        <input class="accent-green settings-button" type="button" onclick="setAccentColor('00FF00')">
+                        <input class="accent-blue settings-button" type="button" onclick="setAccentColor('0000FF')">
+                    </div>
+                </div>
+            </div>
+
+            <div class="widget-style widget-library" id="widgetLibrary">
+                <p>Library</p>
+            </div>
+        </div> -->
+        <script type="text/javascript" src="{{ url_for('static', filename='script.js') }}"></script>
     </body>
 </html>

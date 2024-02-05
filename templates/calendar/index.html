@@ -1,0 +1,29 @@
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono:wght@500&display=swap');
+
+.calendar-view-container{
+    display: flex;
+    justify-content: center;
+}
+.calender-view-container div{
+    font-size: 2em;
+    font-family: 'Overpass Mono', monospace;
+}
+
+</style>
+<div class=calender-view-container>
+    <div id="calender-view"></div>
+</div>
+
+<script>
+    const calendarView = document.getElementById('calender-view');
+
+    async function updateCalendar() {
+        const response = await fetch("/api/plugin/calendar/get-Calender")
+        const calendar = await response.text();
+        calendarView.innerHTML = calendar;
+    }
+    updateCalendar();
+    setInterval(updateCalendar, 9000000);
+</script>

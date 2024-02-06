@@ -10,9 +10,9 @@ def getContent():
 
 # Diese Funktion erfragt über das requests-Hilfspaket eine Antwort von der Website, diese Website antwortet mit einem zufälligen GIF
 def getGif():
-    the_url="https://storage.googleapis.com/chydlx/codepen/random-random-gif-generator/giphy-logo.gif"
+    the_url="https://api.giphy.com/v1/gifs/trending/api_key=FNA2D2tAS7ECtXZSUMqAh8z7PS8TfXdY"
     response=requests.get(the_url)
-    gif_data=json.loads(response.text)
+    gif_data=response.json()
     gif_url=gif_data["data","image_url"]
     return gif_url
 

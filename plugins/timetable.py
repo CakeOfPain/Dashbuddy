@@ -3,8 +3,6 @@ import logging
 import requests
 import xml.etree.ElementTree as ET
 
-dbApiId = "11ee6296e52f2c41be3956420627b6a3"
-dbApiSecret = "5ec59e4b2fdfb645be715940e47c54e0"
 
 logging.basicConfig(format='%(levelname)s - %(asctime)s - %(message)s', level=logging.INFO)
 logging.info('DB Timetable Plugin')
@@ -14,11 +12,49 @@ def fetchTime(timecode):
     return timecode
 
 def fetchPath(train):
-    logging.info(train.tag)
+    # Base Variables
+    arrival = train.find("ar")
+    departure = train.find("dp")
+    path = []
 
-    #ich bin dumm, das geht net :()
+    # Check, if Train (1) starts here, (2) ends here or (3) has a stop here.
+    if arrival is None and departure is not None:
+        #logging.info("Zug starter hier und fährt weiter")
+        path.append("1")
 
-    return train
+        # Get Terminus
+        pathAfter = departure.attrib.get("ppth")
+        pathAfter = pathAfter.split("|")
+        path.append(pathAfter[len(pathAfter)-1])
+
+    elif arrival is not None and departure is None:
+        #logging.info("Zug endet hier")
+        path.append("2")
+
+        # Get first Station
+        pathBefore = arrival.attrib.get("ppth")
+        pathBefore = pathBefore.split("|")
+        path.append(pathBefore[0])
+
+    elif arrival is not None and departure is not None:
+        #logging.info("Zug hat planmäßigen Halt hier")
+        path.append("3")
+
+        # Get first Station
+        pathBefore = arrival.attrib.get("ppth")
+        pathBefore = pathBefore.split("|")
+        path.append(pathBefore[0])
+
+        # Get Terminus
+        pathAfter = departure.attrib.get("ppth")
+        pathAfter = pathAfter.split("|")
+        path.append(pathAfter[len(pathAfter)-1])
+
+    # Logging for Debug
+    #logging.info(path)
+
+    # Return the Linepath
+    return path
 
 def getTimetable(eva, date, time):
     infraGoUrl = f"https://apis.deutschebahn.com/db-api-marketplace/apis/timetables/v1/plan/{eva}/{date}/{time}"
@@ -47,10 +83,11 @@ def getTimetable(eva, date, time):
             fetchPath(service)
         ]
         timetable.append(train)
+    logging.info(timetable)
     return timetable
 
 def createWidget():
-    timetable = getTimetable(8004094, 240205, 17)
+    timetable = getTimetable(8004094, 240208, 17)
     return render_template("timetable/index.html", stationName=timetable[0]), 200
 
 def createPlugin(plugin):

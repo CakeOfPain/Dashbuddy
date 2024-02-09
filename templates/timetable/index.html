@@ -1,9 +1,80 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+    * {
+        font-family: 'Nunito Sans', monospace;
+        color: white;
+        text-shadow: 0 0 3px #000, 0 0 5px #000;
+    }
+
+    .stationInfo {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-flow: row;
+        align-content: space-between;
+    }
+
+    .logo {
+        width: 100px;
+    }
+
+    .seperator {
+        border-top: 2px solid gray;
+        height: 2px;
+        width: 100%;
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+
+    .timetable {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+
+    h1 {
+        font-size: large;
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+
+    h2 {
+        font-size: medium;
+        font-weight: normal;
+        margin-top: 0px;
+        margin-bottom: 3px;
+    }
+
+    h4 {
+        font-size: small;
+        padding: 0;
+        margin: 0;
+        margin-block-start: 0.5;
+        margin-block-end: 0;
+    }
+
+    p {
+        font-size: smaller;
+        padding: 0;
+        margin: 0;
+        margin-block-start: 0.5;
+        margin-block-end: 2;
+    }
+</style>
+
 <div class="timetable-widget">
-    <div class="header">
-        <h1>{{ stationName }}</h1>
-        <h2>Ankünfte und Abfahrten</h2>
-        <div class="timetable">
-            {{ timetableData }}
+    <div class="stationInfo">
+        <div class="text">
+            <h1>{{ stationName }}</h1>
+            <h2>Ankünfte und Abfahrten</h2>
         </div>
+        <div class="logo">
+            
+        </div>
+    </div>
+    <div class="seperator"></div>
+    <div class="timetable">
+        {{ timetableData }}
     </div>
 </div>

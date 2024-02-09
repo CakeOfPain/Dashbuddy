@@ -1,2 +1,1 @@
-
-[{"height": 1, "widgets": [{"params": {"tag": "Clippy"}, "plugin": "gif"}, {"plugin": "blank"}, {"params": {}, "plugin": "watch"}, {"plugin": "blank"}, {"params": {"tag": "hacker"}, "plugin": "gif"}]}]
+[{"height": 1, "widgets": [{"plugin": "blank"}, {"plugin": "blank"}, {"params": {}, "plugin": "watch"}, {"plugin": "blank"}, {"params": {}, "plugin": "blank"}]}, {"height": 3, "widgets": [{"params": {"show_terminus": "1", "station_id": "8000264"}, "plugin": "timetable"}, {"plugin": "calendar", "params": {}}, {"params": {"tag": "studio ghibli"}, "plugin": "gif"}]}]

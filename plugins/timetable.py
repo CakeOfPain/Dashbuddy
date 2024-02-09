@@ -6,8 +6,8 @@ import logging
 import requests
 import xml.etree.ElementTree as ET
 
-dbApiId = "yourId"
-dbApiSecret = "yourSecret"
+dbApiId = "11ee6296e52f2c41be3956420627b6a3"
+dbApiSecret = "5ec59e4b2fdfb645be715940e47c54e0"
 
 logging.basicConfig(format='%(levelname)s - %(asctime)s - %(message)s', level=logging.INFO)
 logging.info('DB Timetable Plugin')
@@ -97,7 +97,7 @@ def createWidget():
     print(showTerminatingTrains)
     now = datetime.datetime.now()
     # Hält die nächsten 8000 Jahre xD Bis dahin hat jemand anderes bestimmt ne bessere Lösung gefunden
-    dateNow = f'{str(now.year)[2]+str(now.year)[3]}{'{:02d}'.format(now.month)}{'{:02d}'.format(now.day)}'
+    dateNow = f'{str(now.year)[2]+str(now.year)[3]}{"{:02d}".format(now.month)}{"{:02d}".format(now.day)}'
     timeNow = now.hour
     timetable = getTimetable(stationId, dateNow, timeNow)
     trains = ""

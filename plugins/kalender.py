@@ -9,13 +9,13 @@ def getDate():
     return furweekday, 200
     
 def getWeekDay():
-    wochentage=["Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag","Sonnatg"]
+    wochentage=["Montag","Dienstag","Mittwoch","Donnerstag","Freitag","Samstag","Sonntag"]
     tag=date.weekday()
     return wochentage[tag], 200
 
 def getCalender():
     kalenderseite=calendar.HTMLCalendar(calendar.MONDAY)
-    aus=kalenderseite.formatmonth(2024,1)
+    aus=kalenderseite.formatmonth(datetime.now().date().year,datetime.now().date().month)
     return(aus), 200
 
 def getContent():

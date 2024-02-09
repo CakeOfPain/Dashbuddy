@@ -38,11 +38,13 @@ function toggleSettingsMenu() {
         settingsMenu.style.display = "none";
     }
 }
-
+// Problem: Somehow location.href searches for edit.html
+// Problemanalyse: Library und Settings sind am Anfang immer geöffnet! Das soll nicht sein!
 var widgetLibrary = document.getElementById("widgetLibrary");
 function toggleWidgetMenu() {
     if (widgetLibrary.style.display === "none") {
         widgetLibrary.style.display = "block";
+        window.location.href="edit"
     } else {
         widgetLibrary.style.display = "none";
     }

@@ -1,20 +1,19 @@
-from Flask import render_template
+from flask import render_template
 import requests
 
 def getGifGiphy():
-    def search_giphy(api_sch,suche):
-        basisurl="https://api.giphy.com/v1/gifs/search"
-        parameter={"api_key":api_sch, "q":suche, "limit":5}
-        gif=requests.get(basisurl,parameter=parameter)
+    def search_giphy(api_key, suche):
+        basisurl="https://api.giphy.com/v1/gifs/random"
+        parameter={"api_key":api_key, "tag":suche, "rating":5}
+        gif=requests.get(basisurl,params=parameter)
         if gif.status_code==200:
             return gif.json()
         else:
             return("Ein Fehler ist aufgetreten! \n\n Überprüfen Sie Ihre Internetverbindung. \n Überprüfen Sie die Browserkompabilität. \n Wenden Sie sich an einen Consultant.")
     
-    ausgabe=search_giphy("FNA2D2tAS7ECtXZSUMqAh8z7PS8TfXdY","computerscience")
+    ausgabe=search_giphy("FNA2D2tAS7ECtXZSUMqAh8z7PS8TfXdY","fail")
     if ausgabe:
-        for git in ausgabe['Data']:
-            return(git['url'])
+         return ausgabe['data']['images']['original']['url']
     else:
         return("Anfrage war nicht erfolgreich!")
 

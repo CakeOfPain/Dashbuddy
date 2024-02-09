@@ -19,17 +19,16 @@
 </style>
 
 <div class="gif-view-container">
-    <div id="gif-view"></div>
+    <img id="gif-view">
 </div>
 
 <script>
-    const GifView = document.getElementById('gif-view');
 
     async function updateGif() {
-        const response = await fetch("/api/plugin/gif/gif")
+        const gifview = document.getElementById('gif-view');
+        const response = await fetch("/api/plugin/gif/gif");
         const gif = await response.text();
-        GifView.innerHTML = gif;
+        gifview.src = gif;
     }
     updateGif();
-    setInterval(updateGif, 100000);
 </script>

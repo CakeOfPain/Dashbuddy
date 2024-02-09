@@ -1,6 +1,6 @@
 var slider = document.getElementById("background-blur");
-var output = document.getElementById("blur");
-output.innerHTML = "Background Blur: " + slider.value + "px"; // Display the default slider value
+// var output = document.getElementById("blur");
+// output.innerHTML = "Background Blur: " + slider.value + "px"; // Display the default slider value
 
 
 const widgetContainer = document.getElementById('widget-container');

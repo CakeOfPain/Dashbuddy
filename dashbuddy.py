@@ -17,6 +17,10 @@ backgroundUrl = "https://images.unsplash.com/photo-1593291805141-990f40ec982d?q=
 def index():
     return render_template('index.html', imageUrl=backgroundUrl)
 
+@app.route("/edit")
+def editMode():
+    return render_template('edit.html', imageUrl=backgroundUrl), 200
+
 @app.get("/api/widgets")
 def getWidgets():
     with open("./data/widgets.json", "r") as f:

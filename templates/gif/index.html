@@ -1,0 +1,35 @@
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+    
+    .gif-view-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+        background-color: transparent;
+    }
+
+    .gif-view-container div {
+        font-size: 2em;
+        font-family: 'Nunito Sans', monospace;
+        color: white;
+        text-shadow: 0 0 3px #000, 0 0 5px #000;
+    }
+</style>
+
+<div class="gif-view-container">
+    <img id="gif-view">
+</div>
+
+<script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const tag = urlParams.get('tag');
+    async function updateGif() {
+        const gifview = document.getElementById('gif-view');
+        const response = await fetch("/api/plugin/gif/gif?tag=" + tag);
+        const gif = await response.text();
+        gifview.src = gif;
+    }
+    updateGif();
+</script>

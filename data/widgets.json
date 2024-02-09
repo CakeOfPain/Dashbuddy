@@ -1,1 +1,1 @@
-[[{"plugin": "blank"}, {"plugin": "blank"}, {"plugin": "watch", "params": {}}, {"plugin": "blank"}, {"plugin": "blank"}], [{"params": {}, "plugin": "timetable"}, {"plugin": "blank"}, {"plugin": "blank"}, {"plugin": "note", "params": {}}]]
+[{"height": 1, "widgets": [{"plugin": "blank"}, {"params": {}, "plugin": "watch"}, {"plugin": "blank"}]}, {"height": 2, "widgets": [{"params": {"tag": "cake"}, "plugin": "gif"}]}, {"height": 1, "widgets": [{"params": {}, "plugin": "watch"}]}]

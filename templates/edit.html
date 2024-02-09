@@ -75,9 +75,9 @@
                 } else if (selected === "new-row") {
                     widgetsJson.splice(y+1, 0, {height: 1, widgets: [{plugin: "blank"}]});
                 } else if (selected === "increase-height") {
-                    widgetsJson[y].height += 1;
+                    widgetsJson[y].height *= 2;
                 } else if (selected === "decrease-height") {
-                    widgetsJson[y].height -= 1;
+                    widgetsJson[y].height *= 0.5;
                 } else {
                     widgetsJson[y].widgets[x].plugin = selected;
                     widgetsJson[y].widgets[x].params = {};

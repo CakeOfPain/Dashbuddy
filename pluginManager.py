@@ -9,17 +9,19 @@ class Plugin(object):
     def __init__(self):
         self.pluginName: str|None = None
         self.description: str|None = None
-        self.apis: set[tuple[str, Any]] = set()
+        self.apis: set[tuple[str, Any, tuple[str]]] = set()
         self.contentRenderer = lambda: ("Empty", 200)
+        self.params = ()
 
     def name(self, pluginName: str):
         self.pluginName = pluginName
     def describe(self, description: str):
         self.description = description
-    def api(self, name: str, callback):
-        self.apis.add((name, callback))
-    def content(self, callback):
+    def api(self, name: str, callback, params=()):
+        self.apis.add((name, callback, params))
+    def content(self, callback, params=()):
         self.contentRenderer = callback
+        self.params = params
 
 class PluginManager(object):
     def __init__(self, app: flask.Flask):
@@ -44,7 +46,7 @@ class PluginManager(object):
                 createPlugin(plugin)
                 plugin.contentRenderer.__name__ += pluginPath
                 self.plugins.append(plugin)
-                for name, callback in plugin.apis:
+                for name, callback, _ in plugin.apis:
                     callback.__name__ += pluginPath
                     self.flaskApp.get(f'/api/plugin/{plugin.pluginName}/{name}')(callback)
                 self.flaskApp.get(f'/plugin/{plugin.pluginName}')(plugin.contentRenderer)
@@ -57,5 +59,9 @@ class PluginManager(object):
         return [{
             "name": plugin.pluginName,
             "description": plugin.description,
-            "apis": [name for name, _ in plugin.apis]
+            "params": plugin.params,
+            "apis": [{
+                "name": name,
+                "params": params
+            } for name, _, params in plugin.apis],
         } for plugin in self.plugins]

@@ -23,10 +23,11 @@
 </div>
 
 <script>
-
+    const urlParams = new URLSearchParams(window.location.search);
+    const tag = urlParams.get('tag');
     async function updateGif() {
         const gifview = document.getElementById('gif-view');
-        const response = await fetch("/api/plugin/gif/gif");
+        const response = await fetch("/api/plugin/gif/gif?tag=" + tag);
         const gif = await response.text();
         gifview.src = gif;
     }

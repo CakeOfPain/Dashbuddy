@@ -1,1 +1,1 @@
-[{"height": 1, "widgets": [{"plugin": "blank"}, {"params": [], "plugin": "watch"}, {"plugin": "blank"}]}, {"height": 2, "widgets": [{"params": [], "plugin": "gif"}]}, {"height": 1, "widgets": [{"params": [], "plugin": "watch"}]}]
+[{"height": 1, "widgets": [{"plugin": "blank"}, {"params": {}, "plugin": "watch"}, {"plugin": "blank"}]}, {"height": 2, "widgets": [{"params": {"tag": "cake"}, "plugin": "gif"}]}, {"height": 1, "widgets": [{"params": {}, "plugin": "watch"}]}]

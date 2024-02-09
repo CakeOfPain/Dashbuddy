@@ -14,6 +14,11 @@
             * {
                 text-shadow: 0 0 3px #000, 0 0 5px #000;
             }
+
+            ::placeholder {
+                color: white;
+                opacity: 1; /* Firefox */
+            }
         </style>
     </head>
     <body>          
@@ -39,7 +44,16 @@
                             `<option value="blank" ${column.plugin === "blank" ? "selected" : ""}>blank widget</option>` +
                             responsePluginsJson.map(plugin => `<option value="${plugin.name}" ${plugin.name === column.plugin ? "selected" : ""}> ${plugin.name} - ${plugin.description}</option>`).join("");
                         
-                        return `<select id="widget${y}x${x}" class="widget" onchange="alterWidget(${y}, ${x})">>${options}</select>`
+                        const pluginDescription = responsePluginsJson.filter(x => x.name === column.plugin)?.[0];
+
+                        const parameters = (pluginDescription?.params ?? []).map( param => {
+                            return `<div>${param}:<input onchange="editParam(${y}, ${x}, '${param}')" id="param${y}x${x}-${param}" value="${column.params?.[param] ?? ""}"></div>`;
+                        }).join("")
+
+                        return `<div class="widget">` +
+                            `<select id="widget${y}x${x}" onchange="alterWidget(${y}, ${x})">>${options}</select>` +
+                            parameters +
+                            `</div>`
                     }).join("") + "</div>";
                 }).join("");
             }
@@ -66,8 +80,20 @@
                     widgetsJson[y].height -= 1;
                 } else {
                     widgetsJson[y].widgets[x].plugin = selected;
-                    widgetsJson[y].widgets[x].params = [];
+                    widgetsJson[y].widgets[x].params = {};
                 }
+
+                await fetch("/api/widgets", {method: "POST", body: JSON.stringify(widgetsJson)})
+                await loadWidgets();
+            }
+
+            async function editParam(y, x, param) {
+                const paramInput = document.getElementById(`param${y}x${x}-${param}`);
+
+                const widgets = await fetch("/api/widgets");
+                const widgetsJson = await widgets.json();
+
+                widgetsJson[y].widgets[x].params[param] = paramInput.value;
 
                 await fetch("/api/widgets", {method: "POST", body: JSON.stringify(widgetsJson)})
                 await loadWidgets();

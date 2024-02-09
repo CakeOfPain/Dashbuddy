@@ -6,6 +6,9 @@ import logging
 import requests
 import xml.etree.ElementTree as ET
 
+dbApiId = "yourId"
+dbApiSecret = "yourSecret"
+
 logging.basicConfig(format='%(levelname)s - %(asctime)s - %(message)s', level=logging.INFO)
 logging.info('DB Timetable Plugin')
 
@@ -85,15 +88,18 @@ def getTimetable(eva, date, time):
             fetchPath(service)
         ]
         timetable.append(train)
-    logging.info(timetable)
+    #logging.info(timetable)
     return timetable
 
 def createWidget():
+    stationId = request.args.get("station_id")
+    showTerminatingTrains = bool(request.args.get("show_terminus") == "1")
+    print(showTerminatingTrains)
     now = datetime.datetime.now()
     # Hält die nächsten 8000 Jahre xD Bis dahin hat jemand anderes bestimmt ne bessere Lösung gefunden
     dateNow = f'{str(now.year)[2]+str(now.year)[3]}{'{:02d}'.format(now.month)}{'{:02d}'.format(now.day)}'
     timeNow = now.hour
-    timetable = getTimetable(8000157, dateNow, timeNow)
+    timetable = getTimetable(stationId, dateNow, timeNow)
     trains = ""
 
     for i in range(len(timetable)):
@@ -104,7 +110,7 @@ def createWidget():
             if trainType == "1":
                 logging.info(f'Timetable Index {i} -> Traintype {trainType}')
                 trains += f'<div class="train"><h4>{timetable[i][0][0][0]}{timetable[i][0][0][1]} {timetable[i][1][1]}</h4><p>Abfahrt {timetable[i][0][2]} Gleis {timetable[i][0][1]}</p></div>'
-            elif trainType == "2":
+            elif trainType == "2" and showTerminatingTrains:
                 logging.info(f'Timetable Index {i} -> Traintype {trainType}')
                 trains += f'<div class="train"><h4>{timetable[i][0][0][0]}{timetable[i][0][0][1]} {timetable[0]}</h4><p>Ankunft {timetable[i][0][2]}, Zug endet hier!</p></div>'
             elif trainType == "3":
@@ -119,4 +125,4 @@ def createPlugin(plugin):
     plugin.name("timetable")
     plugin.describe("See arrivals and departures")
     plugin.api("fetch", getTimetable)
-    plugin.content(createWidget)
+    plugin.content(createWidget, params=('station_id', 'show_terminus',))

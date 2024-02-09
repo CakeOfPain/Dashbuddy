@@ -1,1 +1,2 @@
-[{"height": 0, "widgets": [{"plugin": "blank"}, {"plugin": "blank"}, {"params": {}, "plugin": "watch"}, {"plugin": "blank"}, {"plugin": "blank"}]}, {"height": 1, "widgets": [{"params": {}, "plugin": "blank"}, {"plugin": "blank"}, {"params": {}, "plugin": "watch"}, {"params": {}, "plugin": "blank"}, {"params": {}, "plugin": "blank"}]}, {"height": 3, "widgets": [{"plugin": "blank"}, {"plugin": "blank"}, {"plugin": "blank"}, {"params": {"show_terminus": "1", "station_id": "8000096"}, "plugin": "timetable"}]}, {"height": 1, "widgets": [{"plugin": "note", "params": {}}]}]
+
+[{"height": 1, "widgets": [{"params": {"tag": "Clippy"}, "plugin": "gif"}, {"plugin": "blank"}, {"params": {}, "plugin": "watch"}, {"plugin": "blank"}, {"params": {"tag": "hacker"}, "plugin": "gif"}]}]

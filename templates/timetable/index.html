@@ -16,6 +16,8 @@
     }
 
     .logo {
+        border-radius: 50%;
+        box-shadow: 0 0 3px #000, 0 0 5px #000;
         width: 55px;
         height: 55px;
         position: absolute;
@@ -24,7 +26,8 @@
     }
 
     .seperator {
-        border-top: 2px solid gray;
+        background-color: white;
+        box-shadow: 0 0 3px #000, 0 0 5px #000;
         height: 2px;
         width: 100%;
         margin-top: 0px;
@@ -34,7 +37,6 @@
     .timetable {
         display: flex;
         flex-direction: column;
-        overflow: hidden;
     }
 
     h1 {
@@ -66,6 +68,13 @@
         margin-block-start: 0.5;
         margin-block-end: 2;
     }
+
+    .meme {
+        position: absolute;
+        top: -735px;
+        right: 0px;
+        scale: 18%;
+    }
 </style>
 
 <div class="timetable-widget">
@@ -80,4 +89,5 @@
     <div class="timetable">
         {{ timetableData }}
     </div>
+    <img class="meme" src="{{ meme }}">
 </div>

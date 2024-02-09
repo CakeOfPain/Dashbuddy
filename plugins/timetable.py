@@ -12,6 +12,12 @@ dbApiSecret = "5ec59e4b2fdfb645be715940e47c54e0"
 logging.basicConfig(format='%(levelname)s - %(asctime)s - %(message)s', level=logging.INFO)
 logging.info('DB Timetable Plugin')
 
+def fetchLine(train):
+    if train[1].attrib.get("l") is None:
+        return train[0].attrib.get("n")
+    else:
+        return train[1].attrib.get("l")
+
 def fetchTime(timecode):
     timecode = f"{timecode[6]+timecode[7]}:{timecode[8]+timecode[9]} Uhr"
     return timecode
@@ -81,7 +87,7 @@ def getTimetable(eva, date, time):
     for service in data:
         train = [
             [
-                [service[0].attrib.get("c"), service[1].attrib.get("l")],
+                [service[0].attrib.get("c"), fetchLine(service)],
                 service[1].attrib.get("pp"),
                 fetchTime(service[1].attrib.get("pt"))
             ],
@@ -109,20 +115,26 @@ def createWidget():
             trainType = timetable[i][1][0]
             if trainType == "1":
                 logging.debug(f'Timetable Index {i} -> Traintype {trainType}')
-                trains += f'<div class="train"><h4>{timetable[i][0][0][0]}{timetable[i][0][0][1]} {timetable[i][1][1]}</h4><p>Abfahrt {timetable[i][0][2]} Gleis {timetable[i][0][1]}</p></div>'
+                trains += f'<div class="train"><h4>{timetable[i][0][0][0]} {timetable[i][0][0][1]} - {timetable[i][1][1]}</h4><p>Abfahrt {timetable[i][0][2]} Gleis {timetable[i][0][1]}</p></div>'
             elif trainType == "2" and showTerminatingTrains:
                 logging.debug(f'Timetable Index {i} -> Traintype {trainType}')
-                trains += f'<div class="train"><h4>{timetable[i][0][0][0]}{timetable[i][0][0][1]} {timetable[0]}</h4><p>Ankunft {timetable[i][0][2]}, Zug endet hier!</p></div>'
+                trains += f'<div class="train"><h4>{timetable[i][0][0][0]} {timetable[i][0][0][1]} - {timetable[0]}</h4><p>Ankunft {timetable[i][0][2]}, Zug endet hier!</p></div>'
             elif trainType == "3":
                 logging.debug(f'Timetable Index {i} -> Traintype {trainType}')
-                trains += f'<div class="train"><h4>{timetable[i][0][0][0]}{timetable[i][0][0][1]} {timetable[i][1][2]}</h4><p>Abfahrt {timetable[i][0][2]} Gleis {timetable[i][0][1]}</p></div>'
+                trains += f'<div class="train"><h4>{timetable[i][0][0][0]} {timetable[i][0][0][1]} - {timetable[i][1][2]}</h4><p>Abfahrt {timetable[i][0][2]} Gleis {timetable[i][0][1]}</p></div>'
     
     data = Markup(f'{trains}')
 
-    return render_template("timetable/index.html", stationName=timetable[0], timetableData = data), 200
+    # Für das Meme :D
+    if bool(request.args.get("you_funny") == "1"):
+        meme = "/static/meme.gif"
+    else:
+        meme = ""
+
+    return render_template("timetable/index.html", stationName=timetable[0], timetableData = data, meme = meme), 200
 
 def createPlugin(plugin):
     plugin.name("timetable")
     plugin.describe("See arrivals and departures")
     plugin.api("fetch", getTimetable)
-    plugin.content(createWidget, params=('station_id', 'show_terminus',))
+    plugin.content(createWidget, params=('station_id', 'show_terminus', 'you_funny',))

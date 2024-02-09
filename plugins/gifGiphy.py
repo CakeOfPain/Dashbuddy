@@ -1,4 +1,4 @@
-from Flask import render_template
+from flask import render_template
 import requests
 
 def getGifGiphy():

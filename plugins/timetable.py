@@ -93,7 +93,7 @@ def createWidget():
     # Hält die nächsten 8000 Jahre xD Bis dahin hat jemand anderes bestimmt ne bessere Lösung gefunden
     dateNow = f'{str(now.year)[2]+str(now.year)[3]}{'{:02d}'.format(now.month)}{'{:02d}'.format(now.day)}'
     timeNow = now.hour
-    timetable = getTimetable(8004094, dateNow, timeNow)
+    timetable = getTimetable(8000157, dateNow, timeNow)
     trains = ""
 
     for i in range(len(timetable)):
@@ -103,15 +103,15 @@ def createWidget():
             trainType = timetable[i][1][0]
             if trainType == "1":
                 logging.info(f'Timetable Index {i} -> Traintype {trainType}')
-                trains += f'<div class="header"><h4>{timetable[i][0][0][0]}{timetable[i][0][0][1]} {timetable[i][1][1]}</h4><p>Abfahrt {timetable[i][0][2]} Gleis {timetable[i][0][1]}</p></div>'
+                trains += f'<div class="train"><h4>{timetable[i][0][0][0]}{timetable[i][0][0][1]} {timetable[i][1][1]}</h4><p>Abfahrt {timetable[i][0][2]} Gleis {timetable[i][0][1]}</p></div>'
             elif trainType == "2":
                 logging.info(f'Timetable Index {i} -> Traintype {trainType}')
-                #trains += f'<div class="header"><h4>{timetable[i][0][0][0]}{timetable[i][0][0][1]} {timetable[0]}</h4><p>Zug endet hier!</p></div>'
+                trains += f'<div class="train"><h4>{timetable[i][0][0][0]}{timetable[i][0][0][1]} {timetable[0]}</h4><p>Ankunft {timetable[i][0][2]}, Zug endet hier!</p></div>'
             elif trainType == "3":
                 logging.info(f'Timetable Index {i} -> Traintype {trainType}')
-                trains += f'<div class="header"><h4>{timetable[i][0][0][0]}{timetable[i][0][0][1]} {timetable[i][1][2]}</h4><p>Abfahrt {timetable[i][0][2]} Gleis {timetable[i][0][1]}</p></div>'
+                trains += f'<div class="train"><h4>{timetable[i][0][0][0]}{timetable[i][0][0][1]} {timetable[i][1][2]}</h4><p>Abfahrt {timetable[i][0][2]} Gleis {timetable[i][0][1]}</p></div>'
     
-    data = Markup(f'<div class="train">{trains}</div>')
+    data = Markup(f'{trains}')
 
     return render_template("timetable/index.html", stationName=timetable[0], timetableData = data), 200
 

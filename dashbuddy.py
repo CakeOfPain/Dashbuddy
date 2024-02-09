@@ -11,7 +11,7 @@ app = Flask(__name__)
 pluginManager = PluginManager(app)
 pluginManager.manage()
 
-backgroundUrl = "https://images.unsplash.com/photo-1593291805141-990f40ec982d?q=80&w=3132&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+backgroundUrl = "https://images.unsplash.com/photo-1531366936337-7c912a4589a7?q=80&w=3000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
 
 @app.route("/")
 def index():

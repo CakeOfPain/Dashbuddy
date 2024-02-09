@@ -71,7 +71,7 @@ def getTimetable(eva, date, time):
         }
     
     response = requests.get(infraGoUrl, headers=headers)
-    logging.info(f'HTTP Response from Timetables V1: {response}')
+    logging.debug(f'HTTP Response from Timetables V1: {response}')
     data = ET.fromstring(response.text)
 
     timetable = []
@@ -88,14 +88,14 @@ def getTimetable(eva, date, time):
             fetchPath(service)
         ]
         timetable.append(train)
-    #logging.info(timetable)
+    logging.debug(timetable)
     return timetable
 
 def createWidget():
     stationId = request.args.get("station_id")
     showTerminatingTrains = bool(request.args.get("show_terminus") == "1")
-    print(showTerminatingTrains)
     now = datetime.datetime.now()
+
     # Hält die nächsten 8000 Jahre xD Bis dahin hat jemand anderes bestimmt ne bessere Lösung gefunden
     dateNow = f'{str(now.year)[2]+str(now.year)[3]}{"{:02d}".format(now.month)}{"{:02d}".format(now.day)}'
     timeNow = now.hour
@@ -104,17 +104,17 @@ def createWidget():
 
     for i in range(len(timetable)):
         if i == 0:
-            logging.info(f'Timetable Index 0 -> Station Name {timetable[0]}')
+            logging.debug(f'Timetable Index 0 -> Station Name {timetable[0]}')
         else:
             trainType = timetable[i][1][0]
             if trainType == "1":
-                logging.info(f'Timetable Index {i} -> Traintype {trainType}')
+                logging.debug(f'Timetable Index {i} -> Traintype {trainType}')
                 trains += f'<div class="train"><h4>{timetable[i][0][0][0]}{timetable[i][0][0][1]} {timetable[i][1][1]}</h4><p>Abfahrt {timetable[i][0][2]} Gleis {timetable[i][0][1]}</p></div>'
             elif trainType == "2" and showTerminatingTrains:
-                logging.info(f'Timetable Index {i} -> Traintype {trainType}')
+                logging.debug(f'Timetable Index {i} -> Traintype {trainType}')
                 trains += f'<div class="train"><h4>{timetable[i][0][0][0]}{timetable[i][0][0][1]} {timetable[0]}</h4><p>Ankunft {timetable[i][0][2]}, Zug endet hier!</p></div>'
             elif trainType == "3":
-                logging.info(f'Timetable Index {i} -> Traintype {trainType}')
+                logging.debug(f'Timetable Index {i} -> Traintype {trainType}')
                 trains += f'<div class="train"><h4>{timetable[i][0][0][0]}{timetable[i][0][0][1]} {timetable[i][1][2]}</h4><p>Abfahrt {timetable[i][0][2]} Gleis {timetable[i][0][1]}</p></div>'
     
     data = Markup(f'{trains}')

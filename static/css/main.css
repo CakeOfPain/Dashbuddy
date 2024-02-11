@@ -82,19 +82,6 @@ body {
     display: none;
 }
 
-.widget-library {
-    /* Widget Position */
-    z-index: 100;
-    position: absolute;
-    margin: 0;
-    padding: 0;
-    bottom: 88px;
-    right: 21px;
-    height: 400px;
-    width: 300px;
-    display: none;
-}
-
 .widget-style {
     /* Widget Styling */
     background: var(--widget-background);

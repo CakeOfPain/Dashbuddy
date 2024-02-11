@@ -40,17 +40,17 @@
             </div>
 
             <div class="settings-container widget-style" style="display: none;" id="settingsMenu">
-                <p>Settings</p>
-                <div class="blur-slider">
-                    <p id="blur"></p>
-                    <input type="range" min="0" max="15" value="0" class="slider" id="background-blur">
-                </div>
-                <div class="accent-color">
-                    <p id="accent">Accent Color:</p>
+                <p>Change Background</p>
+                <div class="background-selection">
                     <div class="selection-box">
-                        <input class="accent-red settings-button" type="button" onclick="setAccentColor('FF0000')">
-                        <input class="accent-green settings-button" type="button" onclick="setAccentColor('00FF00')">
-                        <input class="accent-blue settings-button" type="button" onclick="setAccentColor('0000FF')">
+                        <input class="settings-background-button" src="{{ backgroundImage1 }}" type="image" width="120" height="80" onclick="setBackground('{{ backgroundImage1 }}')">
+                        <input class="settings-background-button" src="{{ backgroundImage2 }}" type="image" width="120" height="80" onclick="setBackground('{{ backgroundImage2 }}')">
+                        <input class="settings-background-button" src="{{ backgroundImage3 }}" type="image" width="120" height="80" onclick="setBackground('{{ backgroundImage3 }}')">
+                        <input class="settings-background-button" src="{{ backgroundImage4 }}" type="image" width="120" height="80" onclick="setBackground('{{ backgroundImage4 }}')">
+                        <input class="settings-background-button" src="{{ backgroundImage5 }}" type="image" width="120" height="80" onclick="setBackground('{{ backgroundImage5 }}')">
+                        <input class="settings-background-button" src="{{ backgroundImage6 }}" type="image" width="120" height="80" onclick="setBackground('{{ backgroundImage6 }}')">
+                        <input class="settings-background-button" src="{{ backgroundImage7 }}" type="image" width="120" height="80" onclick="setBackground('{{ backgroundImage7 }}')">
+                        <input class="settings-background-button" src="{{ backgroundImage8 }}" type="image" width="120" height="80" onclick="setBackground('{{ backgroundImage8 }}')">
                     </div>
                 </div>
             </div>

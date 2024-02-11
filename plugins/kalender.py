@@ -19,6 +19,7 @@ def getCalender():
     wochentage_string=" ".join(wochentage)
 
     html_kalendar="<table>\n"
+    html_kalendar +="<tr>"+"".join(f"<th>{tag}</th>" for tag in wochentage)+"</tr>\n"
 
     for woche in kal_monat:
         html_kalendar +="<tr>" + "".join(f"<td>{tag if tag != 0 else ''}</td>" for tag in woche) + "</tr>\n"

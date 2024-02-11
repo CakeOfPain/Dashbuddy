@@ -1,17 +1,3 @@
-var slider = document.getElementById("background-blur");
-// var output = document.getElementById("blur");
-// output.innerHTML = "Background Blur: " + slider.value + "px"; // Display the default slider value
-
-// Update the current slider value (each time you drag the slider handle)
-slider.oninput = function () {
-    output.innerHTML = "Background Blur: " + this.value + "px";
-    document.documentElement.style.setProperty("--blur-strength", this.value + "px");
-}
-
-// Set Accent Color
-function setAccentColor(color) {
-    document.documentElement.style.setProperty("--accent-color", '#' + color);
-}
 // Settings menu
 var settingsMenu = document.getElementById("settingsMenu");
 function toggleSettingsMenu() {
@@ -30,4 +16,8 @@ function toggleToEditMode() {
 }
 function toggleToDashboardMode() {
     window.location.href = "/";
+}
+
+function setBackground(url) {
+    document.body.style.backgroundImage = `url(${url})`;
 }

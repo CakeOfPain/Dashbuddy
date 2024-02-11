@@ -18,7 +18,7 @@ def getCalender():
     wochentage = ["MO", "DI", "MI", "DO", "FR", "SA", "SO"]
     wochentage_string=" ".join(wochentage)
 
-    html_kalendar="<table>\n"
+    html_kalendar="<table style='width:100%'>\n"
     html_kalendar +="<tr>"+"".join(f"<th>{tag}</th>" for tag in wochentage)+"</tr>\n"
 
     for woche in kal_monat:

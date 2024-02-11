@@ -14,7 +14,7 @@ text-shadow: 0 0 3px #000, 0 0 5px #000
 color:white;
 text-shadow: 0 0 3px #000, 0 0 5px #000
 }
-h1{font-size:medium;
+h1{font-size:large;
     margin:4px
 }
 p{font-size:small;
@@ -33,10 +33,11 @@ margin:0px;
         </div>
         <hr>
         <div class="wochentage">
-            {{ weekDays }}
+            {{ weekdays }}
         </div>
-        <div calss="tabeldayz">
-            {{ weeks }}
+        <hr>
+        <div class="tabeldayz">
+            {{ weeks|safe }}
         </div>
         <hr>
     </div>

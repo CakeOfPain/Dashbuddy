@@ -2,32 +2,30 @@ from datetime import date
 from datetime import datetime
 import calendar
 from flask import render_template
-    
+
+
+# Problem mit dem Plugin: Der Kalender wird immer auf die Komplete Breite gestreckt!
 def getCalender():
     aktuellesD=datetime.now()
     wochentag=aktuellesD.strftime("%A")
     datum=aktuellesD.strftime("%d.%m.%Y")
     tagdatum=f"{wochentag}, der {datum}"
 
-    heute=datetime.now()
-    jahr=heute.year
-    monat=heute.month
-    tag=heute.day
+    heute = calendar.datetime.datetime.now()
+    jahr, monat = heute.year, heute.month
 
-    kal_monat=calendar.monthcalendar(jahr,monat)
-    for woche in kal_monat:
-        for i, t in enumerate(woche):
-            if t== tag:
-                woche[i]=str(t).lstrip("0")
-    wochentage=["MO","DI","MI","DO","FR","SA","SO"]
+    kal_monat = calendar.monthcalendar(jahr, monat)
+    wochentage = ["MO", "DI", "MI", "DO", "FR", "SA", "SO"]
     wochentage_string=" ".join(wochentage)
 
-    aktueller_wochentag=calendar.weekday(jahr,monat,tag)
-    markierter_tag=wochentage[aktueller_wochentag]+"*"
+    html_kalendar="<table>\n"
 
-    kal_monat_string="\n".join(" ".join(markierter_tag if t==tag else str(t) for t in woche) for woche in kal_monat)
+    for woche in kal_monat:
+        html_kalendar +="<tr>" + "".join(f"<td>{tag if tag != 0 else ''}</td>" for tag in woche) + "</tr>\n"
+    html_kalendar+="</table>"
 
-    return render_template("calendar/index.html", weekDays=wochentage_string, weeks=kal_monat_string, dateDay=tagdatum),200
+    kal_monat_string=html_kalendar
+    return render_template("calendar/index.html", weeks=kal_monat_string, weekdays=wochentage_string, dateDay=tagdatum),200
 
 def createPlugin(plugin):
     plugin.name('calendar')

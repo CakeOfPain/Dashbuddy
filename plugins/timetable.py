@@ -104,7 +104,7 @@ def createWidget():
 
     # Hält die nächsten 8000 Jahre xD Bis dahin hat jemand anderes bestimmt ne bessere Lösung gefunden
     dateNow = f'{str(now.year)[2]+str(now.year)[3]}{"{:02d}".format(now.month)}{"{:02d}".format(now.day)}'
-    timeNow = now.hour
+    timeNow = "{:02d}".format(now.hour)
     timetable = getTimetable(stationId, dateNow, timeNow)
     trains = ""
 

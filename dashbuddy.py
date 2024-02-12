@@ -28,7 +28,7 @@ def index():
 
 @app.route("/edit")
 def editMode():
-    return render_template('edit.html', imageUrl=backgrounds[2]), 200
+    return render_template('edit.html', imageUrl=backgrounds[2], backgroundImage1=backgrounds[0], backgroundImage2=backgrounds[1], backgroundImage3=backgrounds[2], backgroundImage4=backgrounds[3], backgroundImage5=backgrounds[4], backgroundImage6=backgrounds[5], backgroundImage7=backgrounds[6], backgroundImage8=backgrounds[7]), 200
 
 @app.get("/api/widgets")
 def getWidgets():

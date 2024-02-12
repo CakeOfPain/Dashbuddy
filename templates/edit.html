@@ -26,34 +26,36 @@
             }
         </style>
     </head>
-    <body>          
+    <body>
         <div id="widget-container" class="widget-container-column">
         </div>
-        <div class="application">
-            <div class="menu-bar">
-                <button class="menu-icon menu-button" onclick="toggleToDashboardMode()">
-                    <i class='bx bxs-check-square'></i>
-                </button>
-                <button class="menu-icon menu-button" onclick="toggleSettingsMenu()">
-                    <i class='bx bxs-cog'></i>
-                </button>
-            </div>
 
-            <div class="settings-container widget-style" style="display: none;" id="settingsMenu">
-                <p>Change Background</p>
-                <div class="background-selection">
-                    <div class="selection-box">
-                        <input class="settings-background-button" src="{{ backgroundImage1 }}" type="image" width="120" height="80" onclick="setBackground('{{ backgroundImage1 }}')">
-                        <input class="settings-background-button" src="{{ backgroundImage2 }}" type="image" width="120" height="80" onclick="setBackground('{{ backgroundImage2 }}')">
-                        <input class="settings-background-button" src="{{ backgroundImage3 }}" type="image" width="120" height="80" onclick="setBackground('{{ backgroundImage3 }}')">
-                        <input class="settings-background-button" src="{{ backgroundImage4 }}" type="image" width="120" height="80" onclick="setBackground('{{ backgroundImage4 }}')">
-                        <input class="settings-background-button" src="{{ backgroundImage5 }}" type="image" width="120" height="80" onclick="setBackground('{{ backgroundImage5 }}')">
-                        <input class="settings-background-button" src="{{ backgroundImage6 }}" type="image" width="120" height="80" onclick="setBackground('{{ backgroundImage6 }}')">
-                        <input class="settings-background-button" src="{{ backgroundImage7 }}" type="image" width="120" height="80" onclick="setBackground('{{ backgroundImage7 }}')">
-                        <input class="settings-background-button" src="{{ backgroundImage8 }}" type="image" width="120" height="80" onclick="setBackground('{{ backgroundImage8 }}')">
-                    </div>
+        <div class="menu-bar">
+            <button class="menu-icon menu-button" onclick="toggleToDashboardMode()">
+                <i class='bx bxs-check-square'></i>
+            </button>
+            <button class="menu-icon menu-button" onclick="toggleSettingsMenu()">
+                <i class='bx bxs-cog'></i>
+            </button>
+        </div>
+
+        <div class="settings-container widget-style" style="display: none;" id="settingsMenu">
+            <p>Change Background</p>
+            <div class="background-selection">
+                <div class="selection-box">
+                    <input class="settings-background-button" src="{{ backgroundImage1 }}" type="image" width="120" height="80" onclick="setBackground('{{ backgroundImage1 }}')">
+                    <input class="settings-background-button" src="{{ backgroundImage2 }}" type="image" width="120" height="80" onclick="setBackground('{{ backgroundImage2 }}')">
+                    <input class="settings-background-button" src="{{ backgroundImage3 }}" type="image" width="120" height="80" onclick="setBackground('{{ backgroundImage3 }}')">
+                    <input class="settings-background-button" src="{{ backgroundImage4 }}" type="image" width="120" height="80" onclick="setBackground('{{ backgroundImage4 }}')">
+                    <input class="settings-background-button" src="{{ backgroundImage5 }}" type="image" width="120" height="80" onclick="setBackground('{{ backgroundImage5 }}')">
+                    <input class="settings-background-button" src="{{ backgroundImage6 }}" type="image" width="120" height="80" onclick="setBackground('{{ backgroundImage6 }}')">
+                    <input class="settings-background-button" src="{{ backgroundImage7 }}" type="image" width="120" height="80" onclick="setBackground('{{ backgroundImage7 }}')">
+                    <input class="settings-background-button" src="{{ backgroundImage8 }}" type="image" width="120" height="80" onclick="setBackground('{{ backgroundImage8 }}')">
                 </div>
             </div>
+        </div>
+        
+        <div class="application">
         </div>
         <script type="text/javascript" src="{{ url_for('static', filename='/scripts/settings.js') }}"></script>
         <script type="text/javascript" src="{{ url_for('static', filename='/scripts/editWidgets.js') }}"></script>

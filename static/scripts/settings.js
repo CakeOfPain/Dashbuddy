@@ -18,6 +18,24 @@ function toggleToDashboardMode() {
     window.location.href = "/";
 }
 
-function setBackground(url) {
+async function setBackground(url) {
     document.body.style.backgroundImage = `url(${url})`;
+
+
+    const response = await fetch("/api/customization")
+    const customization = await response.json();
+
+    customization.background = url;
+    
+    await fetch("/api/customization", {
+        method: "POST",
+        body: JSON.stringify(customization)
+    });
 }
+
+
+(async function() {
+    const response = await fetch("/api/customization")
+    const customization = await response.json();
+    await setBackground(customization.background);
+})()

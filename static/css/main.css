@@ -35,7 +35,7 @@ body {
 }
 
 .menu-bar {
-    position: absolute;
+    position: fixed;
     right: 15px;
     bottom: 15px;
     width: 128px;
@@ -72,7 +72,7 @@ body {
 .settings-container {
     /* Widget Position */
     z-index: 100;
-    position: absolute;
+    position: fixed;
     margin: 0;
     padding: 0;
     bottom: 88px;

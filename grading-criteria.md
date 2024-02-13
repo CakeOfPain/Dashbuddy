@@ -6,25 +6,49 @@ Alle Kriterien betreffen nur die Projektarbeit. Beweismaterial kommt aus dem Gru
 
 ## FACHKOMPETENZ (40 Punkte)
 
-# Die Studierenden kennen die Grundelemente der prozeduralen Programmierung. (10)
-<!-- Siehe Kenntnisse in prozeduraler Programmierung: zutreffendes wählen und beweisen-->
+# Die Studierenden kennen die Grundelemente der prozeduralen Programmierung. (10) - Leo
 
-# Sie können die Syntax und Semantik von Python (10)
+## - Algorithmenbeschreibung
+
+## - Datentypen
+
+- [bool](https://github.com/CakeOfPain/Dashbuddy/blob/df92ce0aa2cbae4b21508d448df3fbe73af835c9/plugins/timetable.py#L129)
+- [str](https://github.com/CakeOfPain/Dashbuddy/blob/df92ce0aa2cbae4b21508d448df3fbe73af835c9/plugins/kalender.py#L19)
+- [set](https://github.com/CakeOfPain/Dashbuddy/blob/df92ce0aa2cbae4b21508d448df3fbe73af835c9/pluginManager.py#L12C21-L12C59)
+- [closure](https://github.com/CakeOfPain/Dashbuddy/blob/df92ce0aa2cbae4b21508d448df3fbe73af835c9/pluginManager.py#L13)
+- [list](https://github.com/CakeOfPain/Dashbuddy/blob/df92ce0aa2cbae4b21508d448df3fbe73af835c9/pluginManager.py#L42)
+- [dict](https://github.com/CakeOfPain/Dashbuddy/blob/df92ce0aa2cbae4b21508d448df3fbe73af835c9/pluginManager.py#L59)
+- [int](https://github.com/CakeOfPain/Dashbuddy/blob/df92ce0aa2cbae4b21508d448df3fbe73af835c9/dashbuddy.py#L36)
+- [tuple](https://github.com/CakeOfPain/Dashbuddy/blob/df92ce0aa2cbae4b21508d448df3fbe73af835c9/plugins/gifGiphy.py#L30C32-L30C47)
+
+
+## - E/A-Operationen und Dateiverarbeitung
+
+## - Operatoren
+
+## - Kontrollstrukturen
+
+## - Funktionen
+
+## - Stringverarbeitung
+
+## - Strukturierte Datentypen
+
+# Sie können die Syntax und Semantik von Python (10) - Sebastian
 <!-- Eine Stelle aus ihrem Programmieren wählen auf die sie besonders stolz sind und begründen -->
 
-
-# Sie können ein größeres Programm selbständig entwerfen, programmieren und auf Funktionsfähigkeit testen (Das Projekt im Team) (10)
+# Sie können ein größeres Programm selbständig entwerfen, programmieren und auf Funktionsfähigkeit testen (Das Projekt im Team) (10) - Pascal
 <!-- Anhand von commits zeigen, wie jeder im Projekt einen Beitrag geleistet hat -->
 
 
-# Sie kennen verschiedene Datenstrukturen und können diese exemplarisch anwenden. (10)
+# Sie kennen verschiedene Datenstrukturen und können diese exemplarisch anwenden. (10) - Leo
 <!-- Eine Stelle aus dem Projekt wählen auf die sie besonders stolz sind und begründen -->
 
 
 
 ## METHODENKOMPETENZ (10 Punkte)
 
-# Die Studierenden können eine Entwicklungsumgebung verwenden um Programme zu erstellen (10)
+# Die Studierenden können eine Entwicklungsumgebung verwenden um Programme zu erstellen (10) - Sebastian
 <!-- Beweise anbringen für Nutzen folgender Tools (können links, screenshots und screnncasts sein) -->
 
 <!-- zB -->
@@ -37,15 +61,15 @@ Alle Kriterien betreffen nur die Projektarbeit. Beweismaterial kommt aus dem Gru
 
 ## PERSONALE UND SOZIALE KOMPETENZ (20 Punkte)
 
-# Die Studierenden können ihre Software erläutern und begründen. (5)
+# Die Studierenden können ihre Software erläutern und begründen. (5) - Pascal
 <!-- Jeder in der Gruppe: You have helped someone else and taught something to a fellow student (get a support message from one person) -->
 ja (Präsentation)
 
-# Sie können existierenden Code analysieren und beurteilen. (5)
+# Sie können existierenden Code analysieren und beurteilen. (5) - Leo
 <!-- Pro Gruppe:You have critiqued another group project. Link to your critique here (another wiki page on your git) and link the project in the critique, use these evaluation criteria to critique the other project. Make sure they get a top grade after making the suggested changes -->
 
 
-# Sie können sich selbstständig in Entwicklungsumgebungen und Technologien einarbeiten und diese zur Programmierung und Fehlerbehebung einsetzen. (10)
+# Sie können sich selbstständig in Entwicklungsumgebungen und Technologien einarbeiten und diese zur Programmierung und Fehlerbehebung einsetzen. (10) - Sebastian
 <!-- Which technology did you learn outside of the teacher given input -->
 <!-- Did you or your group get help from someone in the classroom (get a support message here from the person who helped you) -->
 
@@ -53,27 +77,8 @@ ja (Präsentation)
 
 ## ÜBERGREIFENDE HANDLUNGSKOMPETENZ (30 Punkte)
 
-# Die Studierenden können eigenständig Problemstellungen der Praxis analysieren und zu deren Lösung Programme entwerfen (30)
+# Die Studierenden können eigenständig Problemstellungen der Praxis analysieren und zu deren Lösung Programme entwerfen (30) - Alle ein Punkt wo er stolz ist
 <!-- Which parts of your project are you proud of and why (describe, analyse, link) -->
 <!-- Where were the problems with your implementation, timeline, functionality, team management (describe, analyse, reflect from past to future, link if relevant) -->
 
-
-
-## Kenntnisse in prozeduraler Programmierung:
-
-# - Algorithmenbeschreibung
-
-# - Datentypen
-
-# - E/A-Operationen und Dateiverarbeitung
-
-# - Operatoren
-
-# - Kontrollstrukturen
-
-# - Funktionen
-
-# - Stringverarbeitung
-
-# - Strukturierte Datentypen
 

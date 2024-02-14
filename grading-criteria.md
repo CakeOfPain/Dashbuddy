@@ -43,7 +43,23 @@ Darauf folgt die Python-Klasse [PluginManager](https://github.com/CakeOfPain/Das
 
 # Sie können ein größeres Programm selbständig entwerfen, programmieren und auf Funktionsfähigkeit testen (Das Projekt im Team) (10) - Pascal
 <!-- Anhand von commits zeigen, wie jeder im Projekt einen Beitrag geleistet hat -->
+Commits von [`@CakeOfPain`](https://github.com/CakeOfPain) (Leo):
 
+- https://github.com/CakeOfPain/Dashbuddy/commit/7df47ea92eee09223438f70e2af4547226b60fa7
+- https://github.com/CakeOfPain/Dashbuddy/commit/fcab67801bb582917fbecd19fc8b8a7ba28bde43
+- https://github.com/CakeOfPain/Dashbuddy/commit/22a17b8d5d197973178d14dfb9b801f5212e8b32
+
+Commits von [`Sebastian`](https://github.com/riedl-sebastian):
+
+- https://github.com/CakeOfPain/Dashbuddy/commit/c96fe6a166defb4b33b603d2e287aa39a020f7f0
+- https://github.com/CakeOfPain/Dashbuddy/commit/5934ce496ac81c12199ed77d71867f6b55d6413e
+- https://github.com/CakeOfPain/Dashbuddy/commit/8f3e6235a61e02dd4e73dca9b4ca0d9c7733ab64
+
+Commits von [`@Evolinox`](https://github.com/Evolinox) (Pascal):
+
+- https://github.com/CakeOfPain/Dashbuddy/commit/e1db4e321751e45feb101a48b0169ebf01e7ca41
+- https://github.com/CakeOfPain/Dashbuddy/commit/178bb7fb7fcf90498bd7af642bfdbb032b81da0a
+- https://github.com/CakeOfPain/Dashbuddy/commit/b6cb93d62b731da8802be29716c886582c996128
 
 # Sie kennen verschiedene Datenstrukturen und können diese exemplarisch anwenden. (10) - Leo
 <!-- Eine Stelle aus dem Projekt wählen auf die sie besonders stolz sind und begründen -->

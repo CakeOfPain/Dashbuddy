@@ -24,15 +24,63 @@ Alle Kriterien betreffen nur die Projektarbeit. Beweismaterial kommt aus dem Gru
 
 ## - E/A-Operationen und Dateiverarbeitung
 
+Widgets:
+
+- Eingabe über die Edit-Funktion des Plugin:
+  - [html inputs](https://github.com/CakeOfPain/Dashbuddy/blob/8d1947e7bdfd4a8c96b6badaf37059bf05f39634/static/scripts/editWidgets.js#L23)
+  - [html select](https://github.com/CakeOfPain/Dashbuddy/blob/8d1947e7bdfd4a8c96b6badaf37059bf05f39634/static/scripts/editWidgets.js#L27)
+- Weiterverarbeitung durch APIs:
+  - [Aufruf der API für Widgets zum speichern](https://github.com/CakeOfPain/Dashbuddy/blob/8d1947e7bdfd4a8c96b6badaf37059bf05f39634/static/scripts/editWidgets.js#L66)
+  - [Verarbeitung des API Aufrufs](https://github.com/CakeOfPain/Dashbuddy/blob/8d1947e7bdfd4a8c96b6badaf37059bf05f39634/dashbuddy.py#L39)
+  - [Aufruf der API für Widgets zum lesen](https://github.com/CakeOfPain/Dashbuddy/blob/8d1947e7bdfd4a8c96b6badaf37059bf05f39634/static/scripts/renderWidgets.js#L5)
+
+DB-Plugin:
+- Verarbeitung einer Anfrage zu einer Timetable der DB:
+  - [Eingabe der Station-ID über Parameter](https://github.com/CakeOfPain/Dashbuddy/blob/8d1947e7bdfd4a8c96b6badaf37059bf05f39634/plugins/timetable.py#L101)
+  - [Verarbeitung des Requests](https://github.com/CakeOfPain/Dashbuddy/blob/8d1947e7bdfd4a8c96b6badaf37059bf05f39634/plugins/timetable.py#L70)
+  - [Darstellung als HTML](https://github.com/CakeOfPain/Dashbuddy/blob/8d1947e7bdfd4a8c96b6badaf37059bf05f39634/plugins/timetable.py#L134C10-L134C117)
+
+Konsole:
+- [print](https://github.com/CakeOfPain/Dashbuddy/blob/8d1947e7bdfd4a8c96b6badaf37059bf05f39634/pluginManager.py#L38)
+
+Dateien:
+- [Datei Eingabe](https://github.com/CakeOfPain/Dashbuddy/blob/8d1947e7bdfd4a8c96b6badaf37059bf05f39634/dashbuddy.py#L51)
+- [Datei Ausgabe](https://github.com/CakeOfPain/Dashbuddy/blob/8d1947e7bdfd4a8c96b6badaf37059bf05f39634/dashbuddy.py#L40)
+
 ## - Operatoren
 
+- [String Concatenation](https://github.com/CakeOfPain/Dashbuddy/blob/8d1947e7bdfd4a8c96b6badaf37059bf05f39634/plugins/kalender.py#L25)
+- [Vergleichsoperator](https://github.com/CakeOfPain/Dashbuddy/blob/8d1947e7bdfd4a8c96b6badaf37059bf05f39634/plugins/timetable.py#L129)
+- [InkrementierenMitOperator](https://github.com/CakeOfPain/Dashbuddy/blob/8d1947e7bdfd4a8c96b6badaf37059bf05f39634/pluginManager.py#L47)
+- [Zuweisungsoperator](https://github.com/CakeOfPain/Dashbuddy/blob/8d1947e7bdfd4a8c96b6badaf37059bf05f39634/pluginManager.py#L23)
+- [MinusOperator](https://github.com/CakeOfPain/Dashbuddy/blob/8d1947e7bdfd4a8c96b6badaf37059bf05f39634/pluginManager.py#L36)
+- [MemberAccessOperator](https://github.com/CakeOfPain/Dashbuddy/blob/8d1947e7bdfd4a8c96b6badaf37059bf05f39634/plugins/timetable.py#L81)
+- [Typ-Spezifizier-Operator](https://github.com/CakeOfPain/Dashbuddy/blob/8d1947e7bdfd4a8c96b6badaf37059bf05f39634/pluginManager.py#L10)
+- Und noch viele mehr!
+
 ## - Kontrollstrukturen
+- [for-Schleife](https://github.com/CakeOfPain/Dashbuddy/blob/8d1947e7bdfd4a8c96b6badaf37059bf05f39634/plugins/timetable.py#L111)
+- [if-else-Abfrage](https://github.com/CakeOfPain/Dashbuddy/blob/8d1947e7bdfd4a8c96b6badaf37059bf05f39634/plugins/timetable.py#L112)
+- [if-else-if-Abfrage](https://github.com/CakeOfPain/Dashbuddy/blob/8d1947e7bdfd4a8c96b6badaf37059bf05f39634/plugins/timetable.py#L116)
+- [with](https://github.com/CakeOfPain/Dashbuddy/blob/8d1947e7bdfd4a8c96b6badaf37059bf05f39634/dashbuddy.py#L40)
+- [for-comprehension](https://github.com/CakeOfPain/Dashbuddy/blob/8d1947e7bdfd4a8c96b6badaf37059bf05f39634/pluginManager.py#L35)
+- [try-except](https://github.com/CakeOfPain/Dashbuddy/blob/8d1947e7bdfd4a8c96b6badaf37059bf05f39634/pluginManager.py#L44)
 
 ## - Funktionen
+- [Funktion](https://github.com/CakeOfPain/Dashbuddy/blob/8d1947e7bdfd4a8c96b6badaf37059bf05f39634/dashbuddy.py#L34)
+- [Lambda](https://github.com/CakeOfPain/Dashbuddy/blob/8d1947e7bdfd4a8c96b6badaf37059bf05f39634/pluginManager.py#L13)
+- [Methode](https://github.com/CakeOfPain/Dashbuddy/blob/8d1947e7bdfd4a8c96b6badaf37059bf05f39634/pluginManager.py#L33)
 
 ## - Stringverarbeitung
 
+- [String Interpolation/Formatting](https://github.com/CakeOfPain/Dashbuddy/blob/8d1947e7bdfd4a8c96b6badaf37059bf05f39634/pluginManager.py#L54)
+- [String Concatenation](https://github.com/CakeOfPain/Dashbuddy/blob/8d1947e7bdfd4a8c96b6badaf37059bf05f39634/plugins/kalender.py#L25)
+- [Split](https://github.com/CakeOfPain/Dashbuddy/blob/8d1947e7bdfd4a8c96b6badaf37059bf05f39634/plugins/timetable.py#L38C21-L38C30)
+
 ## - Strukturierte Datentypen
+
+- [Plugin](https://github.com/CakeOfPain/Dashbuddy/blob/8d1947e7bdfd4a8c96b6badaf37059bf05f39634/pluginManager.py#L8)
+- [Plugin-Manager](https://github.com/CakeOfPain/Dashbuddy/blob/8d1947e7bdfd4a8c96b6badaf37059bf05f39634/pluginManager.py#L26)
 
 # Sie können die Syntax und Semantik von Python (10) - Sebastian
 <!-- Eine Stelle aus ihrem Programmieren wählen auf die sie besonders stolz sind und begründen -->
@@ -43,19 +91,19 @@ Darauf folgt die Python-Klasse [PluginManager](https://github.com/CakeOfPain/Das
 
 # Sie können ein größeres Programm selbständig entwerfen, programmieren und auf Funktionsfähigkeit testen (Das Projekt im Team) (10) - Pascal
 <!-- Anhand von commits zeigen, wie jeder im Projekt einen Beitrag geleistet hat -->
-Commits von [`@CakeOfPain`](https://github.com/CakeOfPain) (Leo):
+Commits von [`@CakeOfPain`](https://github.com/CakeOfPain) (Leo Englert):
 
 - https://github.com/CakeOfPain/Dashbuddy/commit/7df47ea92eee09223438f70e2af4547226b60fa7
 - https://github.com/CakeOfPain/Dashbuddy/commit/fcab67801bb582917fbecd19fc8b8a7ba28bde43
 - https://github.com/CakeOfPain/Dashbuddy/commit/22a17b8d5d197973178d14dfb9b801f5212e8b32
 
-Commits von [`Sebastian`](https://github.com/riedl-sebastian):
+Commits von [`Sebastian`](https://github.com/riedl-sebastian) (Sebastian Riedl):
 
 - https://github.com/CakeOfPain/Dashbuddy/commit/c96fe6a166defb4b33b603d2e287aa39a020f7f0
 - https://github.com/CakeOfPain/Dashbuddy/commit/5934ce496ac81c12199ed77d71867f6b55d6413e
 - https://github.com/CakeOfPain/Dashbuddy/commit/8f3e6235a61e02dd4e73dca9b4ca0d9c7733ab64
 
-Commits von [`@Evolinox`](https://github.com/Evolinox) (Pascal):
+Commits von [`@Evolinox`](https://github.com/Evolinox) (Pascal Jedicke):
 
 - https://github.com/CakeOfPain/Dashbuddy/commit/e1db4e321751e45feb101a48b0169ebf01e7ca41
 - https://github.com/CakeOfPain/Dashbuddy/commit/178bb7fb7fcf90498bd7af642bfdbb032b81da0a
@@ -63,8 +111,8 @@ Commits von [`@Evolinox`](https://github.com/Evolinox) (Pascal):
 
 # Sie kennen verschiedene Datenstrukturen und können diese exemplarisch anwenden. (10) - Leo
 <!-- Eine Stelle aus dem Projekt wählen auf die sie besonders stolz sind und begründen -->
-
-
+[Stelle aus dem Code (Set & Tuple)](https://github.com/CakeOfPain/Dashbuddy/blob/8d1947e7bdfd4a8c96b6badaf37059bf05f39634/pluginManager.py#L12)
+Durch das Set, werden doppelte API-Routen von Plugins automatisch herausgefiltert.
 
 ## METHODENKOMPETENZ (10 Punkte)
 
@@ -84,6 +132,7 @@ ja (Präsentation)
 
 # Sie können existierenden Code analysieren und beurteilen. (5) - Leo
 <!-- Pro Gruppe:You have critiqued another group project. Link to your critique here (another wiki page on your git) and link the project in the critique, use these evaluation criteria to critique the other project. Make sure they get a top grade after making the suggested changes -->
+Coming soon
 
 
 # Sie können sich selbstständig in Entwicklungsumgebungen und Technologien einarbeiten und diese zur Programmierung und Fehlerbehebung einsetzen. (10) - Sebastian

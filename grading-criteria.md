@@ -128,7 +128,7 @@ Durch das Set, werden doppelte API-Routen von Plugins automatisch herausgefilter
 
 # Die Studierenden können ihre Software erläutern und begründen. (5) - Pascal
 <!-- Jeder in der Gruppe: You have helped someone else and taught something to a fellow student (get a support message from one person) -->
-ja (Präsentation)
+Wir haben uns nach den Vorlesungen in der Bibliothek getroffen und Pair-Programming betrieben, weshalb keine Aufzeichnungen vorhanden sind.
 
 # Sie können existierenden Code analysieren und beurteilen. (5) - Leo
 <!-- Pro Gruppe:You have critiqued another group project. Link to your critique here (another wiki page on your git) and link the project in the critique, use these evaluation criteria to critique the other project. Make sure they get a top grade after making the suggested changes -->

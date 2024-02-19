@@ -119,9 +119,10 @@ Durch das Set, werden doppelte API-Routen von Plugins automatisch herausgefilter
 # Die Studierenden können eine Entwicklungsumgebung verwenden um Programme zu erstellen (10) - Sebastian
 <!-- Beweise anbringen für Nutzen folgender Tools (können links, screenshots und screnncasts sein) -->
 
-- [MicrosoftVisualStudio]
+- [Visual Studio Code](https://code.visualstudio.com/)
+  - ![vscode](./docs/vscode.png)
 - [Github](https://github.com/CakeOfPain/Dashbuddy)
-
+  - ![github](/./docs/github.png)
 
 
 ## PERSONALE UND SOZIALE KOMPETENZ (20 Punkte)

@@ -9,7 +9,7 @@ class Plugin(object):
     def __init__(self):
         self.pluginName: str|None = None
         self.description: str|None = None
-        self.apis: set[tuple[str, Any, tuple[str]]] = set()
+        self.apis: set[tuple[str, Any, tuple]] = set()
         self.contentRenderer = lambda: ("Empty", 200)
         self.params = ()
 

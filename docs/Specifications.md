@@ -11,22 +11,75 @@ Each Widget object has the following fields:
 Example:
 ```json
 [
-    [
-        {
-            "plugin": "plugin-xyz-name",
-            "params": ["Some parameter of plugin"]
-        }
-    ],
-    [
-        {
-            "plugin": "plugin2-xyz-name",
-            "params": []
-        },
-        {
-            "plugin": "plugin3-xyz-name",
-            "params": []
-        }
-    ]
+    {
+        "height": 0.5,
+        "widgets": [
+            {
+                "params": {},
+                "plugin": "blank"
+            },
+            {
+                "plugin": "blank"
+            },
+            {
+                "params": {},
+                "plugin": "watch"
+            },
+            {
+                "plugin": "blank"
+            },
+            {
+                "params": {},
+                "plugin": "blank"
+            }
+        ]
+    },
+    {
+        "height": 3,
+        "widgets": [
+            {
+                "params": {
+                    "show_terminus": "1",
+                    "station_id": "8004094",
+                    "you_funny": "1"
+                },
+                "plugin": "timetable"
+            },
+            {
+                "plugin": "blank"
+            },
+            {
+                "params": {},
+                "plugin": "blank"
+            },
+            {
+                "params": {},
+                "plugin": "blank"
+            },
+            {
+                "params": {},
+                "plugin": "calendar"
+            }
+        ]
+    },
+    {
+        "height": 1,
+        "widgets": [
+            {
+                "params": {
+                    "tag": "muffins"
+                },
+                "plugin": "gif"
+            },
+            {
+                "plugin": "blank"
+            },
+            {
+                "params": {},
+                "plugin": "blank"
+            }
+        ]
+    }
 ]
 ```
 Methods:

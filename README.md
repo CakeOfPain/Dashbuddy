@@ -42,6 +42,6 @@ It's similar to a skilltree in video-games.
 ## Memes
 Funny Lisp Meme:
 
-![Lisp](https://www.lisperati.com/lisplogo_warning_256.png)
-
 <img width="200" src="https://tenor.com/view/flushed-gif-23088083.gif">
+
+![Lisp](https://www.lisperati.com/lisplogo_warning_256.png)

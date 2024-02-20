@@ -4,7 +4,7 @@ Extendable Dashboard written in Python.
 ## Demo
 
 
-If the following video doesn't use this link: [Click me](https://www.youtube.com/watch?v=5hDGjZO-zWU)
+If the following video doesn't work use this link: [Click me](https://www.youtube.com/watch?v=5hDGjZO-zWU)
 <iframe width="966" height="471" src="https://www.youtube.com/embed/5hDGjZO-zWU" title="dashbuddy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Requirements PIP
@@ -38,3 +38,10 @@ flask --app dashbuddy run
 Also take a look at the folder `./docs/progresstree` which has to be opened with obsidian.
 Within this folder is the so called `progresstree` of the project, which indicates the progress of the project.
 It's similar to a skilltree in video-games.
+
+## Memes
+Funny Lisp Meme:
+
+![Lisp](https://www.lisperati.com/lisplogo_warning_256.png)
+
+<img width="200" src="https://tenor.com/view/flushed-gif-23088083.gif">

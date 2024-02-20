@@ -2,6 +2,9 @@
 Extendable Dashboard written in Python.
 
 ## Demo
+
+
+If the following video doesn't use this link: [Click me](https://www.youtube.com/watch?v=5hDGjZO-zWU)
 <iframe width="966" height="471" src="https://www.youtube.com/embed/5hDGjZO-zWU" title="dashbuddy" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ## Requirements PIP

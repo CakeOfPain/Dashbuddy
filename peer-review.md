@@ -1,4 +1,6 @@
-# Peer Review [OpenGL-Tetris](https://github.com/rpfaeffle/DHBW-Programming-1-Final-Project/)
+# Peer Review [OpenGL-Tetris](https://github.com/rpfaeffle/DHBW-Programming-1-Final-Project/tree/4e842d232aa8329d2fd0aef77d4971139f525973)
+
+Hier zum Projekt das erklärt wurde (Speziell ein Commit): [OpenGL-Tetris](https://github.com/rpfaeffle/DHBW-Programming-1-Final-Project/tree/4e842d232aa8329d2fd0aef77d4971139f525973)
 
 ## Kritik
 - [Hätte man auch in eine Funktion aussondern können, um den Code ](https://github.com/rpfaeffle/DHBW-Programming-1-Final-Project/blob/4e842d232aa8329d2fd0aef77d4971139f525973/src/core/font.py#L44)

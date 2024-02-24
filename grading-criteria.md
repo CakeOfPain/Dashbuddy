@@ -123,6 +123,8 @@ Durch das Set, werden doppelte API-Routen von Plugins automatisch herausgefilter
   - ![vscode](./docs/vscode.png)
 - [Github](https://github.com/CakeOfPain/Dashbuddy)
   - ![github](/./docs/github.png)
+- [Obsidian](https://obsidian.md/)
+  - ![obsidian](./docs/Obsidian.png)
 
 
 ## PERSONALE UND SOZIALE KOMPETENZ (20 Punkte)
@@ -133,8 +135,7 @@ Wir haben uns nach den Vorlesungen in der Bibliothek getroffen und Pair-Programm
 
 # Sie können existierenden Code analysieren und beurteilen. (5)
 <!-- Pro Gruppe:You have critiqued another group project. Link to your critique here (another wiki page on your git) and link the project in the critique, use these evaluation criteria to critique the other project. Make sure they get a top grade after making the suggested changes -->
-Coming soon
-
+[Peer Review](./peer-review.md) für das Projekt [OpenGL-Tetris](https://github.com/rpfaeffle/DHBW-Programming-1-Final-Project/).
 
 # Sie können sich selbstständig in Entwicklungsumgebungen und Technologien einarbeiten und diese zur Programmierung und Fehlerbehebung einsetzen. (10)
 <!-- Which technology did you learn outside of the teacher given input -->

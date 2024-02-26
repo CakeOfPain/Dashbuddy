@@ -13,3 +13,15 @@ Hier zum Projekt das erklärt wurde (Speziell ein Commit): [OpenGL-Tetris](https
 - Datenstrukturen gut gewählt, Beispiel `deque`
 - Namensvergebung einheitlich
 - Es werden Konstanten deklariert, was den Code verständlicher macht
+
+## Grading Criteria für die Gruppe
+
+### Fachkompetenz (siehe [Grading Criteria](https://github.com/rpfaeffle/DHBW-Programming-1-Final-Project/blob/main/GRADING_CRITERIA.md) für Details)
+
+- [x] Verwendung von verschiedenen Datentypen
+- [x] E-/A-Operationen und Dateiverarbeitung
+- [x] Operatoren
+- [x] Kontrollstrukturen
+- [x] Funktionen
+- [x] Stringverarbeitung
+- [x] Strukturierte Datentypen
